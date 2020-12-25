@@ -19,10 +19,23 @@
   <div class="bar3"></div>
 </a>
 </div>
+<div id="menubar" class="menubar">
+  <a href="#">Home</a>
+  <a href="#">CTE</a>
+  <a href="#">Chapter</a>
+  <a href="#">Contact</a>
+</div>
 <script>
 function myFunction(x) {
   x.classList.toggle("change");
+  var menubar = document.getElementById("menubar");
+  if (menubar.style.display === "none" || menubar.style.display === "" ) {
+    menubar.style.display = "block";
+  } else {
+    menubar.style.display = "none";
 
+  }
+  // document.getElementById("menubar").classList.toggle('showmenubar')
 }
 </script>
 <script type="text/javascript">
