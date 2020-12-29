@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="MedComm_Icon.svg">
+    <link rel="stylesheet" href= "https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
+    <title>Webmaster Navigation Menu Test</title>
+    <style>
+        /* styles for visible topnav menu:  */
+        #topnav{
+            padding-right: 15px;
+            box-shadow: 2px 2px 4px grey;
+            display: inline-block;
+            height: 60px;
+            overflow: hidden;
+            padding-bottom: 5px;
+            transition: 0.3s;
+        }
+        .nav, .homelogo {
+            float: left;
+            margin: 1em 0 0 1em;
+        }
+        .nav div {
+            height: 4px;
+            background-color: black;
+            margin: 5px 0;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        .nav {
+            float: left;
+            width: 30px;
+            height: auto;
+        }
+        .bar1 {
+            width: 30px;
+        }
+        .bar2 {
+            width: 20px;
+        }
+        .bar3 {
+            width: 10px;
+        }
+        .nav:hover div {
+            width: 30px;
+        }
+        .nav:hover {
+            cursor: pointer;
+        }
+
+        /* styles for other items in menu: */
+        .menu_items {
+            padding-top: 50px;
+        }
+        
+        .menu_items a {
+            padding: 0px 0px 12px 12px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #000000;
+            display: block;
+            font-family: "GothamPro";
+        }
+
+        /* styles for animation: */
+        .change .bar1 {
+            -webkit-transform: translate(0px, 9px) rotate(-45deg);
+            transform: translate(0px, 9px) rotate(-45deg);
+        }
+        .change .bar2 {opacity: 0;}
+        .change .bar3 {
+            -webkit-transform: translate(0px, -9px) rotate(45deg);
+            transform: translate(0x, -9px) rotate(45deg);
+            width: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="topnav" style = "height: 60px">
+        <div class="nav" role="button" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+        </div>
+        <div class="homelogo">
+            <a href="#">
+                <img src="MedComm_Logo.svg" height=32px>
+            </a>
+        </div>
+        <br>
+        <div class="menu_items">
+            <a href="#">About Us</a>
+            <a href="#">History</a>
+            <a href="#">Services</a>
+            <a href="#">Plans</a>
+            <a href="#">Store</a>
+            <a href="#">Contact</a>
+        </div>    
+    </div>
+</body>
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+        var topnav = document.getElementById("topnav")
+        if (topnav.style.height == "60px") {
+            topnav.style.height = "310px";
+        }
+        else {
+            topnav.style.height = "60px";
+        }
+    }
+</script>
+</html>
