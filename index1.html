@@ -49,13 +49,15 @@
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("topnav").style.width = "12%";
+    document.getElementById("topnav").style.width = "13%";
     document.getElementById("hamburger").style.display = "block"
-  //  document.getElementById("logo").style.marginLeft = "-40"
+    document.getElementById("logo").style.display = "block"
+
 
   } else {
     document.getElementById("topnav").style.width = "100%";
     document.getElementById("hamburger").style.display = "none"
+    document.getElementById("logo").style.display = "block"
 
   }
 }
