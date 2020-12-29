@@ -1,0 +1,119 @@
+/* styles for visible topnav menu:  */
+#topnav{
+    padding-right: 15px;
+    box-shadow: 2px 2px 4px 2px grey;
+    display: block;
+    height: 60px;
+    overflow: hidden;
+    padding-bottom: 5px;
+    transition: 0.3s;
+    width: 100%;
+    position: fixed;
+    transition: .3s;
+
+}
+.nav, .homelogo {
+  float: left;
+    margin: 1em 0 0 1em;
+}
+.nav div {
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+.nav {
+    float: left;
+    width: 30px;
+    height: auto;
+    display: none;
+    transition: .3s;
+}
+.bar1 {
+    width: 30px;
+}
+.bar2 {
+    width: 20px;
+}
+.bar3 {
+    width: 10px;
+}
+.nav:hover div {
+    width: 32px;
+}
+.nav:hover {
+    cursor: pointer;
+}
+/*Button END*/
+/* styles for other items in menu: */
+.menu_items {
+    padding-top: 50px;
+}
+
+.menu_items a {
+    padding: 0px 0px 12px 12px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #717D8E;
+    display: block;
+    font-family: 'Comfortaa', cursive;
+}
+.list:hover {
+  color: black;
+}
+/* styles for animation: */
+.change .bar1 {
+<<<<<<< HEAD
+  -webkit-transform: translate(0px, 9px) rotate(-45deg);
+  transform: translate(0px, 9px) rotate(-45deg);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+  -webkit-transform: translate(0px, -9px) rotate(45deg);
+  transform: translate(0x, -9px) rotate(45deg);
+  width: 30px;
+}
+
+* {box-sizing:border-box}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+=======
+    -webkit-transform: translate(0px, 9px) rotate(-315deg);
+    transform: translate(0px, 9px) rotate(315deg);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+    -webkit-transform: translate(0px, -9px) rotate(45deg);
+    transform: translate(0px, -9px) rotate(45deg);
+    width: 30px;
+>>>>>>> fixed mnubar
+}
+.hi {
+
+  height: 2000px;
+}

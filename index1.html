@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="logo1.png">
+    <link rel="stylesheet" href="main1.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <style>
+    </style>
+</head>
+<body>
+    <div id="topnav" style = "height: 60px">
+        <div id="hamburger" class="nav" role="button" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+        </div>
+
+        <div id="logo" class="homelogo">
+            <a href="index1.html">
+                <img src="logo.png" height=32px>
+            </a>
+        </div>
+        <br>
+        <div class="menu_items">
+            <a class="list" href="#">Home</a>
+            <a class="list" href="#">CTE</a>
+            <a class="list" href="#">About our Chapter</a>
+            <a class="list" href="#">Calendar</a>
+            <a class="list" href="#">Events</a>
+            <a class="list" href="#">Contact</a>
+            <a class="list" href="#">MedComm</a>
+        </div>
+    </div>
+</body>
+<script id="javascript">
+    function myFunction(x) {
+        x.classList.toggle("change");
+        var topnav = document.getElementById("topnav")
+        if (topnav.style.height == "60px") {
+            topnav.style.height = "375px";
+        }
+        else {
+            topnav.style.height = "60px";
+        }
+    }
+
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("topnav").style.width = "12%";
+    document.getElementById("hamburger").style.display = "block"
+  //  document.getElementById("logo").style.marginLeft = "-40"
+
+  } else {
+    document.getElementById("topnav").style.width = "100%";
+    document.getElementById("hamburger").style.display = "none"
+
+  }
+}
+</script>
+<div class="hi">
+</div>
+</html>
