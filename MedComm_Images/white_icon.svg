@@ -5,13 +5,8 @@
  width="990.000000pt" height="556.000000pt" viewBox="0 0 990.000000 556.000000"
  preserveAspectRatio="xMidYMid meet">
 
-<linearGradient id="POgradient" gradientTransform="rotate(90)">
-    <stop offset="0%" stop-color="#FF5D1A" />
-    <stop offset="100%" stop-color="#FF0BC5" />
-</linearGradient>
-
 <g transform="translate(0.000000,556.000000) scale(0.100000,-0.100000)"
-fill="url(#POgradient)" stroke="none">
+fill="#ffffff" stroke="none">
 <path d="M1095 5551 l-440 -6 -84 -28 c-268 -91 -454 -285 -543 -567 l-23 -75
 1 -982 c1 -1081 -3 -1008 61 -1050 24 -16 63 -18 368 -21 187 -2 584 -1 883 3
 l542 7 7 27 c8 32 252 733 284 814 25 66 54 87 117 87 48 0 87 -28 101 -73 12

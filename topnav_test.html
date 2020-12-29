@@ -1,32 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" href="MedComm_Icon.svg">
+    <link rel="icon" href="MedComm_Images/gradient_icon.svg">
     <link rel="stylesheet" href= "https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
     <title>Webmaster Navigation Menu Test</title>
     <style>
-        /* styles for visible topnav menu:  */
-        #topnav{
-            padding-right: 15px;
+        body {
+            margin: 0;
+        }
+        #spacer {
+            height: 200vh;
+        }
+        /* styles for static topnav menu: */
+        #statnav {
+            position: relative;
+            z-index: 200;
+            height: 60px;
+            background-image: linear-gradient(90deg, #ff5d1aff, #ff0bc4ff);
+            overflow: hidden;
+            box-shadow: 0px 2px 4px grey;
+        }
+        #statnav a:not(#statlogo){
+            font-size: 22px;
+            font-family: "GothamPro", sans-serif;
+            color: white;
+            float: left;
+            text-align: center;
+            padding: 19px 20px;
+            text-decoration: none;
+        }
+        #statlogo {
+            padding: 12px 10px;
+            float: left;
+        }
+        #statnav a:hover{
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        #statnav .active {
+            background-color: rgba(0, 0, 0, 0.2);
+            pointer-events: none;
+        }
+
+        /* styles for portable topnav menu:  */
+        #portnav{
+            visibility: hidden;
+            position: fixed;
+            top: 5px;
+            left: 5px;
+            z-index: 199;
+            background-color: white;
+            padding: 0px 15px 5px 0px;
+            border-radius: 6px;
             box-shadow: 2px 2px 4px grey;
             display: inline-block;
-            height: 60px;
+            height: 50px;
             overflow: hidden;
-            padding-bottom: 5px;
             transition: 0.3s;
         }
-        .nav, .homelogo {
-            float: left;
-            margin: 1em 0 0 1em;
+        #portnav a:hover {
+            -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
         }
-        .nav div {
+        #portnav .active {
+            pointer-events: none;
+            -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+        }
+        .hamburger, #portlogo {
+            float: left;
+            margin: 10px 5px 5px 10px;
+        }
+        .hamburger div {
             height: 4px;
             background-color: black;
             margin: 5px 0;
             border-radius: 25px;
             transition: 0.3s;
         }
-        .nav {
+        .hamburger {
             float: left;
             width: 30px;
             height: auto;
@@ -40,55 +91,65 @@
         .bar3 {
             width: 10px;
         }
-        .nav:hover div {
+        .hamburger:hover div {
             width: 30px;
         }
-        .nav:hover {
+        .hamburger:hover {
             cursor: pointer;
         }
-
-        /* styles for other items in menu: */
-        .menu_items {
+        #menu_items {
+            font-family: "GothamPro", sans-serif;
             padding-top: 50px;
         }
         
-        .menu_items a {
+        #menu_items a {
             padding: 0px 0px 12px 12px;
             text-decoration: none;
             font-size: 25px;
             color: #000000;
             display: block;
-            font-family: "GothamPro";
         }
 
         /* styles for animation: */
         .change .bar1 {
-            -webkit-transform: translate(0px, 9px) rotate(-45deg);
-            transform: translate(0px, 9px) rotate(-45deg);
+            -webkit-transform: translate(0px, 9px) rotate(-135deg);
+            transform: translate(0px, 9px) rotate(-135deg);
         }
         .change .bar2 {opacity: 0;}
         .change .bar3 {
-            -webkit-transform: translate(0px, -9px) rotate(45deg);
-            transform: translate(0x, -9px) rotate(45deg);
+            -webkit-transform: translate(0px, -9px) rotate(135deg);
+            transform: translate(0x, -9px) rotate(135deg);
             width: 30px;
         }
 
     </style>
 </head>
 <body>
-    <div id="topnav" style = "height: 60px">
-        <div class="nav" role="button" onclick="myFunction(this)">
+    <div id="statnav">
+        <a class="active" id="statlogo" href="#">
+            <img src="MedComm_Images/white_logo.svg" height=35px>
+        </a>
+        <a href="#">About Us</a>
+        <a href="#">History</a>
+        <a href="#">Services</a>
+        <a href="#">Plans</a>
+        <a href="#">Store</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="portnav" style = "height: 50px">
+        <div class="hamburger" role="button" onclick="myFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
         </div>
-        <div class="homelogo">
-            <a href="#">
-                <img src="MedComm_Logo.svg" height=32px>
+        <div id="portlogo">
+            <a class="active" href="#">
+                <img src="MedComm_Images/gradient_logo.svg" height=35px>
             </a>
         </div>
         <br>
-        <div class="menu_items">
+        <div id="menu_items">
             <a href="#">About Us</a>
             <a href="#">History</a>
             <a href="#">Services</a>
@@ -97,17 +158,38 @@
             <a href="#">Contact</a>
         </div>    
     </div>
+    <div id="spacer"></div>
 </body>
 <script>
     function myFunction(x) {
         x.classList.toggle("change");
-        var topnav = document.getElementById("topnav")
-        if (topnav.style.height == "60px") {
+        var topnav = document.getElementById("portnav")
+        if (topnav.style.height == "50px") {
             topnav.style.height = "310px";
         }
         else {
-            topnav.style.height = "60px";
+            topnav.style.height = "50px";
         }
+    }
+    var portnav = document.getElementById("portnav");
+    var statnav = document.getElementById("statnav");
+    if (window.innerWidth < 1000){
+        statnav.style.visibility = "hidden";
+        portnav.style.visibility = "visible";
+    }
+    else {
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction(){
+
+        if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60){
+            portnav.style.opacity = "100";
+            portnav.style.visibility = "visible";
+        }
+        else {
+            portnav.style.opacity = "0";
+            portnav.style.visibility = "hidden";
+        }
+    }
     }
 </script>
 </html>
