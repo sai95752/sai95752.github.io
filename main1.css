@@ -1,16 +1,18 @@
-/* styles for visible topnav menu:  */
+
 #topnav{
-    padding-right: 15px;
     box-shadow: 2px 2px 4px 2px grey;
     display: block;
     height: 60px;
     overflow: hidden;
     padding-bottom: 5px;
-    transition: 0.3s;
+    transition: 0.15s;
     width: 100%;
     position: fixed;
     transition: .3s;
-
+    margin: -8px -8px;
+    background-color: #ffffff;
+    opacity: 100%;
+    z-index: 5;
 }
 .nav, .homelogo {
   float: left;
@@ -22,6 +24,9 @@
     margin: 5px 0;
     border-radius: 25px;
     transition: 0.3s;
+}
+.box {
+display: block;
 }
 .nav {
     float: left;
@@ -46,25 +51,24 @@
     cursor: pointer;
 }
 /*Button END*/
-/* styles for other items in menu: */
 .menu_items {
     padding-top: 50px;
 }
 
-.menu_items a {
+.list {
     padding: 0px 0px 12px 12px;
     text-decoration: none;
     font-size: 25px;
     color: #717D8E;
     display: block;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa'
 }
+
 .list:hover {
   color: black;
 }
-/* styles for animation: */
+
 .change .bar1 {
-<<<<<<< HEAD
   -webkit-transform: translate(0px, 9px) rotate(-45deg);
   transform: translate(0px, 9px) rotate(-45deg);
 }
@@ -102,18 +106,31 @@
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-=======
-    -webkit-transform: translate(0px, 9px) rotate(-315deg);
-    transform: translate(0px, 9px) rotate(315deg);
+  -webkit-transform: translate(0px, 9px) rotate(-315deg);
+  transform: translate(0px, 9px) rotate(315deg);
 }
 .change .bar2 {opacity: 0;}
 .change .bar3 {
     -webkit-transform: translate(0px, -9px) rotate(45deg);
     transform: translate(0px, -9px) rotate(45deg);
     width: 30px;
->>>>>>> fixed mnubar
 }
-.hi {
+.hi {height: 2000px;}
+.bgcircle {
+  height: 2500px;
+  width: 2500px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 20%;
+  z-index: -1;
+}
+.box {
+display: block;
+float: left;
+padding-left: 65px;
+padding-right: 65px;
+padding-top: 20px;
+padding-bottom: 15px;
 
-  height: 2000px;
 }
