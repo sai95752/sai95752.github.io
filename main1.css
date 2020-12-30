@@ -134,3 +134,7 @@ padding-top: 20px;
 padding-bottom: 15px;
 
 }
+.cir {
+  overflow: hidden;
+  max-width: 100%;
+}
