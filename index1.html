@@ -3,6 +3,7 @@
 <head>
     <link rel="icon" href="logo1.png">
     <link rel="stylesheet" href="main1.css">
+    <link rel="stylesheet" href= "https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,7 +33,7 @@
           <a id="box3" class="box" href="#">Calendar</a>
           <a id="box4" class="box" href="#">Events</a>
           <a id="box5" class="box" href="#">Contact</a>
-          <a id="box6" class="box" href="topnav_test.html">MedComm</a>
+          <a id="box6" class="box" href="topnav_test.html">Webmaster</a>
         </div>
         <br>
         <div id="vertical_menu" class="menu_items">
@@ -41,7 +42,7 @@
             <a class="list" href="#">Calendar</a>
             <a class="list" href="#">Events</a>
             <a class="list" href="#">Contact</a>
-            <a class="list" href="#">MedComm</a>
+            <a class="list" href="#">Webmaster</a>
         </div>
     </div>
     <div class="textbody">
@@ -69,6 +70,8 @@
 
     window.onscroll = function() {scrollFunction()};
 
+
+
 function scrollFunction() {
   if (document.body.scrollTop > 150   || document.documentElement.scrollTop > 150) {
     document.getElementById("topnav").style.width = "190px";
@@ -84,9 +87,9 @@ function scrollFunction() {
     document.getElementById("horizontal_menu").style.display = "block"
   }
 }
-
+window.onresize = function() {windowCollapse()};
 function windowCollapse() {
-  if ($(window).width() < 1440) {
+  if (window.innerWidth < 1440) {
     document.getElementById("topnav").style.width = "190px";
     document.getElementById("hamburger").style.marginLeft = "15px"
     document.getElementById("topnav").style.margin = "0px 0px"

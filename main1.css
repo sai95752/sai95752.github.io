@@ -66,7 +66,7 @@ display: block;
     font-size: 25px;
     color: #717D8E;
     display: block;
-    font-family: 'Comfortaa'
+    font-family: 'Gotham'
 }
 
 .list:hover {
@@ -111,7 +111,7 @@ padding-right: 45px;
 text-decoration: none;
 padding-top: 20px;
 padding-bottom: 20px;
-font-family: 'Comfortaa', sans-serif;
+font-family: 'Gotham', sans-serif;
 font-size: 15px;
 color: #551A8B;
 transition: .3s;
@@ -119,7 +119,7 @@ transition: .3s;
 .box:hover {
   font-size: 25px;
   color: #000000  ;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Gotham', sans-serif;
   font-weight: 800;
 }
 #box2:hover {
@@ -130,5 +130,5 @@ transition: .3s;
   max-width: 100%;
 }
 .textbody {
-  padding-top: 250px;  
+  padding-top: 250px;
 }
