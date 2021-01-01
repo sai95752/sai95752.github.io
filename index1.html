@@ -63,6 +63,7 @@
         }
         else {
             topnav.style.height = "60px";
+
         }
     }
 
@@ -85,11 +86,18 @@ function scrollFunction() {
 }
 
 function windowCollapse() {
-  if ($(window).width() < 1000) {
+  if ($(window).width() < 1440) {
     document.getElementById("topnav").style.width = "190px";
     document.getElementById("hamburger").style.marginLeft = "15px"
     document.getElementById("topnav").style.margin = "0px 0px"
     document.getElementById("horizontal_menu").style.display = "none"
+  }
+  else {
+    document.getElementById("topnav").style.width = "100%";
+    document.getElementById("hamburger").style.marginLeft = "-100px"
+    document.getElementById("topnav").style.height = "60px";
+    document.getElementById("topnav").style.margin = "40px 10px"
+    document.getElementById("horizontal_menu").style.display = "block"
 
   }
 }
