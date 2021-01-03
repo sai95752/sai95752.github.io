@@ -16,12 +16,15 @@
                 <div class="bar2"></div>
                 <div class="bar3"></div>
         </div>
-        <div id="logo" class="homelogo">
+        <!-- <div id="logo" class="homelogo">
             <a href="index1.html">
                 <img id="pic" src="logo1.png" height=32px>
             </a>
-        </div>
+        </div> -->
         <div id="horizontal_menu">
+          <a id="logo" class="homelogo" href="index1.html">
+              <img id="pic" src="logo1.png" height=32px>
+          </a>
           <a id="box" class="box" href="index1.html">Home</a>
           <a id="box1" class="box" href="#">CTE</a>
           <a id="box2" class="box" href="#">About our Chapter</a>
@@ -89,34 +92,39 @@ window.onscroll = function() {scrollFunction2()}
     window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 150   || document.documentElement.scrollTop > 150) {
+  document.body.style.background = '#320661'; // default color
+  if (document.body.scrollTop > 500   || document.documentElement.scrollTop > 500) {
+    // TODO anything you want here when the scroll point is above 500
+    // document.body.style.background = 'black';
+
+  } else if (document.body.scrollTop > 150   || document.documentElement.scrollTop > 150) {
     document.getElementById("topnav").style.width = "160px";
     document.getElementById("hamburger").style.marginLeft = "15px"
-    document.getElementById("topnav").style.margin = "0px 0px"
-    document.getElementById("horizontal_menu").style.display = "none"
-  }
-  else {
+    document.getElementById("topnav").style.margin = "20px 0px"
+    //document.getElementById("horizontal_menu").style.display = "none"
+  } else {
     document.getElementById("topnav").style.width = "100%";
     document.getElementById("hamburger").style.marginLeft = "-100px"
     document.getElementById("topnav").style.height = "60px";
-    document.getElementById("topnav").style.margin = "40px 10px"
+    document.getElementById("topnav").style.margin = "20px 10px"
     document.getElementById("horizontal_menu").style.display = "block"
   }
 }
+
 window.onload = function() {windowCollapse()};
 window.onresize = function() {windowCollapse()};
 function windowCollapse() {
   if (window.innerWidth < 1440) {
     document.getElementById("topnav").style.width = "190px";
     document.getElementById("hamburger").style.marginLeft = "15px"
-    document.getElementById("topnav").style.margin = "0px 0px"
+    document.getElementById("topnav").style.margin = "20px 0px"
     document.getElementById("horizontal_menu").style.display = "none"
   }
   else {
     document.getElementById("topnav").style.width = "100%";
     document.getElementById("hamburger").style.marginLeft = "-100px"
     document.getElementById("topnav").style.height = "60px";
-    document.getElementById("topnav").style.margin = "40px 10px"
+    document.getElementById("topnav").style.margin = "20px 10px"
     document.getElementById("horizontal_menu").style.display = "block"
 
   }

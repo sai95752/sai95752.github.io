@@ -13,8 +13,8 @@ transition: .3s;
     transition: 0.15s;
     width: 100%;
     position: fixed;
-    transition: .3s;
-    margin: 40px 10px;
+    transition: .3s ;
+    margin: 20px 10px;
     background: rgba(0  , 0, 0, 0);
     z-index: 1;
 }
@@ -45,7 +45,7 @@ display: block;
     width: 30px;
     height: auto;
     margin-left: -100px;
-    transition: .3s;
+    transition: width .6s, height: 0s;
 }
 .bar1 {
     width: 30px;
