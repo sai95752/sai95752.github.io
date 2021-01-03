@@ -1,4 +1,10 @@
-
+body {
+  background-color: #320661;
+  opacity: 1;
+  z-index: -3;
+overflow-x: hidden;
+transition: .3s;
+}
 #topnav{
     display: block;
     height: 60px;
@@ -15,6 +21,7 @@
 .nav, .homelogo {
   float: left;
   margin: 1em 0 0 1em;
+  z-index: 1
 }
 #pic {
   transition: .3s;
@@ -25,7 +32,7 @@
 }
 .nav div {
     height: 4px;
-    background-color: black;
+    background-color: #872BE7;
     margin: 5px 0;
     border-radius: 25px;
     transition: 0.3s;
@@ -58,20 +65,20 @@ display: block;
 /*Button END*/
 .menu_items {
     padding-top: 50px;
-}
-
+  }
 .list {
     padding: 0px 0px 12px 12px;
     text-decoration: none;
     font-size: 25px;
-    color: #717D8E;
+    color: #ffffff;
     display: block;
-    font-family: 'Gotham'
+    font-family: 'Raleway';
+    border-radius: 15px;
+    transition: .3s;
 }
 
 .list:hover {
-  color: black;
-  font-size:
+  color: #872BE7;
 }
 
 .change .bar1 {
@@ -90,14 +97,21 @@ display: block;
 }
 .hi {height: 2000px;}
 
+.cir {
+  padding-bottom: 500px;
+}
+
 .bgcircle {
   height: 2500px;
   width: 2500px;
-  background-color: #bbb;
+  background-color: #080404;
   border-radius: 50%;
   display: inline-block;
   opacity: 20%;
   z-index: -1;
+  position: absolute;
+  margin-left: 500px;
+  overflow: hidden;
 }
 #horizontal_menu {
   padding-left: 30px;
@@ -106,29 +120,88 @@ display: block;
 border-top-width: 0px;
 display: block;
 float: left;
-padding-left:  62px;
+padding-left:  45px;
 padding-right: 45px;
 text-decoration: none;
 padding-top: 20px;
 padding-bottom: 20px;
-font-family: 'Gotham', sans-serif;
+font-family: 'Raleway';
 font-size: 15px;
-color: #551A8B;
+color: #FFFFFF;
 transition: .3s;
 }
 .box:hover {
-  font-size: 25px;
-  color: #000000  ;
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Raleway';
   font-weight: 800;
+  background-color: #872BE7;
+  font-size: 16px
 }
-#box2:hover {
-  font-size: 22px;
+#box6 {
+  font-weight: 1200;
 }
-.cir {
+#box6:hover {
+  font-size: 16px;
+}
+ .cir {
   overflow: hidden;
   max-width: 100%;
 }
 .textbody {
-  padding-top: 250px;
+  padding-top: 450px;
+  margin-right: 10px;
+  color: white;
+  font-family: 'open sans';
+  font-size: 69px;
+  text-align: right;
+}
+.tsa {
+  color: #872BE7;
+}
+#arch {
+  display: none;
+}
+.intro {
+  float: right;
+  font-size: 28px;
+  color: white;
+  font-family: 'Playfair Display', sans-serif;
+  z-index: 2;
+  margin-left: 5%;
+  margin-right: 65%;
+}
+.intro p {
+  float: left;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  width: 400px;
+}
+
+#box {
+  color: #872BE7;
+}
+#box:hover {
+  color: #872BE7;
+  background-color: rgba(0, 0, 0, 0);
+}
+.img1 img {
+z-index: -2;
+position: absolute;
+padding-left: 40%;
+width: 50%;
+height: 50%;
+}
+.text2 {
+float: right;
+padding-top: 80px;
+padding-right: 10%
+}
+.text2 h2 {
+  color: white;
+  font-size: 42px;
+  font-family: 'Playfair Display';
+  z-index: 2;
+}
+.text2 hr {
+  float: right;
+  width: 120%
 }
