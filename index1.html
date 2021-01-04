@@ -49,22 +49,22 @@
 <h1 class="heading"> <span id="tsa" class="tsa">TSA|</span><span id="arch" class="tsa"> Architects</span></br> of Amador Valley|</h1>
    </div>
 
-   <div class="img1">
+   <div id="img1" class="img1">
      <img src="tsapic1.jpg" alt="tsapic1">
    </div>
    <div class="intro">
-<h2>Learning to lead in a technical world</h2>
+<h2 id="h1">Learning to lead in a technical world</h2>
 <hr style="width: 160%; float: left" >
-<p>Chartered in 1987, the Technology Student Association (TSA) is an international student non-profit organization created to develop skills and career opportunities in Science, Technology, Engineering, Mathematics, and business education. Over 250,000+ students from 2,000 nationwide chapters learn to become future engineers, scientists, and technologists through TSA's competitive events, leadership opportunities, and integrated educational programs.
+<p id="p1">Chartered in 1987, the Technology Student Association (TSA) is an international student non-profit organization created to develop skills and career opportunities in Science, Technology, Engineering, Mathematics, and business education. Over 250,000+ students from 2,000 nationwide chapters learn to become future engineers, scientists, and technologists through TSA's competitive events, leadership opportunities, and integrated educational programs.
 </p>
    </div>
-   <div class="img2">
+   <div id="img2" class="img2">
      <img src="tsapic2.jpg" alt="tsapic2">
    </div>
    <div class="text2">
-      <h2>About TSA</h2>
+      <h2 id="h2">About TSA</h2>
       <hr >
-      <p>The Amador Valley TSA is based in Pleasanton, CA in Silicon Valley. At AVHS TSA, we give our members the chance to pursue academic challenges among friends with similar goals and interests. Together, chapter members and officers work on competitive events, attend conferences on the state and national levels, and learn to apply leadership skills. This year, Amador Valley will be hosting the Regional Competition for Northern California TSA Chapters. Members of Amador Valley TSA have the chance to become officers within California or run for national office.</p>
+      <p id="p2">The Amador Valley TSA is based in Pleasanton, CA in Silicon Valley. At AVHS TSA, we give our members the chance to pursue academic challenges among friends with similar goals and interests. Together, chapter members and officers work on competitive events, attend conferences on the state and national levels, and learn to apply leadership skills. This year, Amador Valley will be hosting the Regional Competition for Northern California TSA Chapters. Members of Amador Valley TSA have the chance to become officers within California or run for national office.</p>
    </div>
 
     <div class="cir">
@@ -76,11 +76,7 @@
 <!--JS-->
 <script id="javascript">
 
-window.onscroll = function() {
-  effects();
-  test();
-}
-
+window.onbeforeunload = function() {window.scrollTo(0, 0)};
 
 window.onscroll = function() {scrollFunction2()}
     function myFunction(x) {
@@ -96,19 +92,40 @@ window.onscroll = function() {scrollFunction2()}
     }
 
     window.onscroll = function() {scrollFunction()};
-
+document.body.style.background = "#320661"
 function scrollFunction() {
-   if (document.body.scrollTop > 150   || document.documentElement.scrollTop > 150) {
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    document.body.style.background = 'white'
+    document.body.style.opacity = '1'
+
+    document.getElementById('img1').style.visibility = 'visible';
+    document.getElementById('img2').style.visibility = 'visible';
+}
+  else if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    document.body.style.background = 'black';
+    document.body.style.opacity = '1';
+    document.getElementById('img1').style.visibility = 'visible';
+    document.getElementById('img2').style.visibility = 'visible';
+}
+
+  else if (document.body.scrollTop > 150   || document.documentElement.scrollTop > 150) {
     document.getElementById("topnav").style.width = "160px";
-    document.getElementById("hamburger").style.marginLeft = "15px"
-    document.getElementById("topnav").style.margin = "20px 0px"
-    document.getElementById("horizontal_menu").style.display = "none"
+    document.getElementById("hamburger").style.marginLeft = "15px";
+    document.getElementById("topnav").style.margin = "20px 0px";
+    document.getElementById("horizontal_menu").style.display = "none";
+    document.getElementById('img1').style.visibility = 'visible';
+    document.getElementById('img2').style.visibility = 'visible';
+
   } else {
     document.getElementById("topnav").style.width = "100%";
-    document.getElementById("hamburger").style.marginLeft = "-100px"
+    document.getElementById("hamburger").style.marginLeft = "-100px";
     document.getElementById("topnav").style.height = "60px";
-    document.getElementById("topnav").style.margin = "20px 10px"
-    document.getElementById("horizontal_menu").style.display = "block"
+    document.getElementById("topnav").style.margin = "20px 10px";
+    document.getElementById("horizontal_menu").style.display = "block";
+    document.body.style.background = "#320661"
+    document.getElementById('img1').style.visibility = 'hidden';
+    document.getElementById('img2').style.visibility = 'hidden';
+
   }
 }
 
@@ -117,16 +134,16 @@ window.onresize = function() {windowCollapse()};
 function windowCollapse() {
   if (window.innerWidth < 1440) {
     document.getElementById("topnav").style.width = "190px";
-    document.getElementById("hamburger").style.marginLeft = "15px"
-    document.getElementById("topnav").style.margin = "20px 0px"
-    document.getElementById("horizontal_menu").style.display = "none"
+    document.getElementById("hamburger").style.marginLeft = "15px";
+    document.getElementById("topnav").style.margin = "20px 0px";
+    document.getElementById("horizontal_menu").style.display = "none";
   }
   else {
     document.getElementById("topnav").style.width = "100%";
     document.getElementById("hamburger").style.marginLeft = "-100px"
     document.getElementById("topnav").style.height = "60px";
-    document.getElementById("topnav").style.margin = "20px 10px"
-    document.getElementById("horizontal_menu").style.display = "block"
+    document.getElementById("topnav").style.margin = "20px 10px";
+    document.getElementById("horizontal_menu").style.display = "block";
 
   }
 }

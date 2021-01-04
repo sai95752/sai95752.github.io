@@ -3,7 +3,7 @@ body {
   opacity: 1;
   z-index: -3;
 overflow-x: hidden;
-transition: .3s;
+transition: 1s;
 }
 #topnav{
     display: block;
@@ -164,7 +164,7 @@ transition: .3s;
   float: right;
   font-size: 28px;
   color: white;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   z-index: 2;
   margin-left: 5%;
   margin-right: 65%;
@@ -187,6 +187,7 @@ transition: .3s;
   background-color: rgba(0, 0, 0, 0);
 }
 .img1 img {
+  visibility: hidden;
 position: absolute;
 padding-left: 50%;
 width: 45%;
@@ -201,7 +202,7 @@ padding-right: 10%
 .text2 h2 {
   color: white;
   font-size: 42px;
-  font-family: 'Playfair Display';
+  font-family: 'Open Sans';
   z-index: 2;
   text-align: right;
 }
@@ -224,6 +225,7 @@ padding-right: 10%
 
 }
 .img2 img {
+  visibility: hidden;
   width: auto;
     height: 55%;
     padding-left: 50px;
