@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="MedComm_Images/gradient_icon.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href= "https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
+    <title>Webmaster Navigation Menu Test</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-image: linear-gradient(90deg, #b600b6, #800080);
+            margin: 0;
+            /* background-image: url("MedComm_Images/blobs.svg");
+            background-repeat: no-repeat;
+            background-position: 25vw -30vh;
+            background-size: 80.78vw; */
+        }
+        a {
+            text-decoration: none;
+        }
+        * {
+            font-family: "GothamPro", sans-serif;
+        }
+        .spacer {
+            height: 50vh;
+        }
+        /* styles for static topnav menu: */
+
+        #statnav {
+            z-index: 200;
+            position: fixed;
+            height: 60px;
+            width: 100vw;
+            background-image: linear-gradient(90deg, #ff5d1aff, #ff0bc4ff);
+            overflow: hidden;
+            box-shadow: 2px 2px 10px rgba(30, 30, 30, 0.5);
+        }
+        #statnav a:not(.statlogo):not(.hamburger){
+            font-size: 22px;
+            color: white;
+            float: left;
+            text-align: center;
+            padding: 19px 20px;
+        }
+        #statnav .statlogo {
+            padding: 12px 10px;
+            float: left;
+        }
+        .hamburger {
+            z-index: 400;
+            visibility: hidden;
+            float: right;
+            width: 30px;
+            padding: 15px 40px;
+        }
+        #statnav a:hover{
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        #statnav .active {
+            background-color: rgba(0, 0, 0, 0.2);
+            pointer-events: none;
+        }
+        .hamburger div {
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        .bar1 {
+            width: 30px;
+        }
+        .bar2 {
+            width: 20px;
+        }
+        .bar3 {
+            width: 10px;
+        }
+        .hamburger:hover div {
+            width: 30px;
+        }
+        .hamburger:hover {
+            cursor: pointer;
+        }
+        .change .bar1 {
+            -webkit-transform: translate(0px, 9px) rotate(-135deg);
+            transform: translate(0px, 9px) rotate(-135deg);
+        }
+        .change .bar2 {opacity: 0;}
+        .change .bar3 {
+            -webkit-transform: translate(0px, -9px) rotate(135deg);
+            transform: translate(0x, -9px) rotate(135deg);
+            width: 30px;
+        }
+
+        #menu_items {
+            position: fixed;
+            text-align: center;
+            background-color:rgba(255, 255, 255, 0.9);
+            overflow: hidden;
+            width: 100vw;
+            height: 0px;
+            box-shadow: 2px 2px 10px rgba(30, 30, 30, 0.5);
+            transition: 0.3s;
+        }
+        
+        #menu_items a:not(.statlogo) {
+            padding: 12px 0px;
+        }
+        #menu_items .statlogo {
+            margin-top: 70px;
+            padding: 6px 0px;
+        }
+        #menu_items a {
+            border-radius: 8px;
+            font-size: 25px;
+            color: #000000;
+            display: block;
+        }
+        #menu_items a:hover {
+            filter: opacity(.7);
+        }
+
+        #menu_items .active {
+            pointer-events: none;
+            filter: opacity(.5);
+        }
+
+        .white {
+            background-color: white;
+            color: purple;
+        }
+        /* styles for home: */
+
+        #home{
+            /* border-style: solid; */
+            text-align: center;
+            line-height: 1.2;
+            margin: 60px 0px 0px 0px;
+            padding: 3vh 0;
+            display: inline-block;
+            width: 100%;
+            font-size: 3.5vw;
+            color: white;
+        }
+        #hometext {
+            margin: auto;
+            /* border-style: solid; */
+            width: 80%;
+            text-align: left;
+        }
+        #media_buttons img {
+            margin: 0px 3vw 0px 0px;
+            width: 4vw;
+        }
+        #media_buttons img:hover {
+            cursor: pointer;
+            filter: contrast(80%);
+        }
+        /* styles for about: */
+        #about{
+            text-align: center;
+            line-height: 1.5;
+            padding: 3vh 0;
+            display: inline-block;
+            width: 100%;
+            font-size: 2vw;
+        }
+        #abouttext {
+            margin: auto;
+            width: 80%;
+            text-align: left;
+        }
+        /* styles for history: */
+        /* styles for services: */
+        #services{
+            text-align: center;
+            line-height: 1.5;
+            padding: 3vh 0;
+            display: inline-block;
+            width: 100%;
+            font-size: 2vw;
+        }
+        #servicetext {
+            margin: auto;
+            width: 80%;
+            text-align: left;
+        }
+        #servicetext h3 {
+            line-height: .8;
+        }
+        /* styles for plans: */
+        #plans{
+            color: white;
+            text-align: center;
+            line-height: 1.5;
+            padding: 3vh 0;
+            display: inline-block;
+            width: 100%;
+            font-size: 2vw;
+        }
+        #planstext {
+            margin: auto;
+            width: 80%;
+            text-align: left;
+        }
+        #planstext h3 {
+            line-height: .8;
+        }
+        /* styles for store: */
+        /* styles for contact: */
+        #contact{
+            color: white;
+            text-align: center;
+            line-height: 1.5;
+            padding: 3vh 0;
+            display: inline-block;
+            width: 100%;
+            font-size: 2vw;
+        }
+        #contacttext {
+            margin: auto;
+            width: 80%;
+            text-align: left;
+        }
+        #contacttext h3 {
+            line-height: .8;
+        }
+        #map {
+            width: 60vw;
+            height: 40vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="statnav">
+        <a class="active statlogo" href="#home">
+            <img src="MedComm_Images/white_logo.svg" height=35px>
+        </a>
+        <a id="hamburger" class="hamburger" role="button" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </a>
+        <div id="nav_items">
+            <a class="about" href="#about">About Us</a>
+            <a class="history" href="#history">History</a>
+            <a class="services" href="#services">Services</a>
+            <a class="plans" href="#plans">Plans</a>
+            <a class="store" href="#store">Store</a>
+            <a class="contact" href="#contact">Contact</a>
+        </div>
+    </div>
+    <div id="menu_items" style="height: 0px;">
+        <a class="active statlogo" href="#home">
+            <img src="MedComm_Images/gradient_logo.svg" height=35px>
+        </a>
+        <a class="about" href="#about">About Us</a>
+        <a class="history" href="#history">History</a>
+        <a class="services" href="#services">Services</a>
+        <a class="plans" href="#plans">Plans</a>
+        <a class="store" href="#store">Store</a>
+        <a class="contact" href="#contact">Contact</a>
+    </div>
+    <div id="home">
+        <div id="hometext">
+            <h1>The Future of Healthcare.</h1>
+            <p>We're on the cutting-edge of medicine, offering innovative and revolutionary
+                technology. Scroll down to learn more.</p>
+            <div id="media_buttons">
+                <a class = "facebook" href="https://www.facebook.com">
+                    <img src="MedComm_Images/facebook.svg">
+                </a>
+                <a class = "instagram" href="https://www.instagram.com">
+                    <img src="MedComm_Images/instagram.svg">
+                </a>
+                <a class = "twitter" href="https://www.twitter.com">
+                    <img src="MedComm_Images/twitter.svg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="white">
+        <div id="abouttext">
+            <h1>About Us.</h1>
+            <p>MedComm is a service created and maintained by medical students and faculty at UCSF.
+                It was created in March of 2020—as COVID-19 cases were rising and hospitals were
+                getting filled to the brim—with two central goals: serving as a viable way for
+                non-emergency patients get the care they need without adding to the flood of patients
+                at in-person hospitals, and driving down the cost of healthcare for minor issues.
+                We accomplished our first goal thanks to our excellent healthcare and frictionless
+                software, built by professional software engineers with the goal of improving on
+                current video conferencing applications. In addition, as our service is purely driven
+                by medical students seeking practice, we care for minor issues completely free of
+                charge, successfully accomplishing our second goal.</p>
+        </div>
+    </div>
+    <div id="history" class="spacer"></div>
+    <div id="services" class="white">
+        <div id="servicetext">
+            <h1>Services.</h1>
+            <h3>Assistant Medical Professionals On Call</h3>
+            <p>Unlike every other telecommunications service, we provide 24/7 profession medical support. 
+                Our assistant medical professionals are certified doctors and students from the local UCSF, 
+                with skills ranging from dentistry to neuroscience. We have 300 medical professionals on 
+                call 24/7. If your need as a patient is minor, you can meet one on one with our assistant 
+                medical professionals to discuss your problem.</p>
+            <h3>Translators On Call</h3>
+            <p>If the patient speaks a different language than the doctor, we also have experienced 
+                translators on call. Our 400 translators speak over 50 languages. Our translators have 
+                graduated from the top universities with advanced degrees in their language.</p>
+            <h3>Prescription Database</h3>
+            <p>Our software has a database with all the types of medications, and it’s sorted into different 
+                categories, with descriptions, so the doctor can find medications.  We have also partnered 
+                with CVS and Walgreens for medications, so doctors and patients can easily send prescriptions 
+                to either pharmacies. </p>
+            <h3>Note Taking Software</h3>
+            <p>
+                Our software for calls senses the voice between the doctor and the patient, and puts it in 
+                text on the note pad which is accessible to both the patient and doctor. The notepad 
+                automatically detects the important things and highlights them in the notepad, such as taking 
+                in key words and identifying the patient’s illness the prescription given.
+            </p>
+        </div>
+    </div>
+    <div id="plans">
+        <div id="planstext">
+            <h1>Plans.</h1>
+            <h3>Free Plan</h3>
+            <p>Occasional ads, limit of 5 hours per day, and prescription autofilling.</p>
+            <h3>Basic Plan ($5 monthly)</h3>
+            <p>No ads, no call time limit, note taking pad software, and prescription autofilling.</p>
+            <h3>Premium Plan ($10 monthly)</h3>
+            <p>No ads, no call time limit, note taking pad software, prescription autofilling, and translators on call.</p>
+            <h3>Clinic Plan ($15 monthly)</h3>
+            <p>No ads, no call time limit, note taking pad software, prescription autofilling, medical assistants on 
+                call for 5 times per day and translators on call.</p>
+            <h3>Hospital Plan ($20 monthly)</h3>
+            <p>No ads, no call time limit, note taking pad software, prescription autofilling, unlimited medical assistants and translators on call. </p>
+        </div>
+    </div>
+    <div id="store" class="spacer white"></div>
+    <div id="contact">
+        <div id="contacttext">
+            <h1>Contact.</h1>
+            <p>At MedComm, we’re always on the lookout for customer feedback! Please call us, leave a 
+                message below, or email us to reach out!</p>
+            <ul>
+                <li>Email: medcomm@sf.edu</li>
+                <li>Phone: 441 555 4569</li>
+                <li>Meet Us: 505 Parnassus Ave, San Francisco, CA 94143</li>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152695.503528719!2d-122.62820373095185!3d37.05982823667415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858759dacb6383%3A0x4be313988bad802c!2sUCSF%20Medical%20Center!5e0!3m2!1sen!2sus!4v1609747789337!5m2!1sen!2sus"
+                id="map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <li>Hours: 24/7</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+        var menu_items = document.getElementById("menu_items")
+        if (menu_items.style.height == "0px") {
+            menu_items.style.height = "450px";
+        }
+        else {
+            menu_items.style.height = "0px";
+        }
+    }
+
+    var hamburger = document.getElementById("hamburger");
+    var menu_items = document.getElementById("menu_items");
+    var nav_items = document.getElementById("nav_items")
+    if (window.innerWidth < 1100){
+        hamburger.style.visibility = "visible";
+        nav_items.style.visibility = "hidden";
+    }
+    window.onresize = function() {
+        if (window.innerWidth < 1100){
+            hamburger.style.opacity = 1;
+            hamburger.style.visibility = "visible";
+            nav_items.style.opacity = 0;
+            nav_items.style.visibility = "hidden";
+        }
+        else {
+            hamburger.style.opacity = 0;
+            hamburger.style.visibility = "hidden";
+            nav_items.style.opacity = 1;
+            nav_items.style.visibility = "visible";
+            if (menu_items.style.height != "0px"){
+                menu_items.style.height = "0px";
+                hamburger.classList.toggle("change");
+            }
+        }
+    }
+    function is_visible(elem){
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
+    function set_active(class_name){
+        $("a").removeClass("active");
+        $(class_name).addClass("active");
+    }
+
+    $(window).scroll(function(){
+        if(is_visible($("#home"))){
+            set_active(".statlogo");
+        }
+        else if(is_visible($("#about"))){
+            set_active(".about");
+        }
+        else if(is_visible($("#history"))){
+            set_active(".history");
+        }
+        else if(is_visible($("#services"))){
+            set_active(".services");
+        }
+        else if(is_visible($("#plans"))){
+            set_active(".plans");
+        }
+        else if(is_visible($("#store"))){
+            set_active(".store");
+        }
+        else if(is_visible($("#contact"))){
+            set_active(".contact");
+        }
+    });
+
+    // window.onscroll = function() {
+    //     if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
+    //         $("a").removeClass("active");
+    //         $(".about").addClass("active");
+    //     }
+    // }
+
+</script>
+</html>
