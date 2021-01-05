@@ -14,7 +14,7 @@ transition: 1s;
     width: 100%;
     position: fixed;
     transition: .3s ;
-    margin: 20px 10px;
+    margin: 10px 10px;
     background: rgba(0  , 0, 0, 0);
     z-index: 1;
 }
@@ -65,12 +65,13 @@ display: block;
 /*Button END*/
 .menu_items {
     padding-top: 50px;
+
   }
 .list {
     padding: 0px 0px 12px 12px;
     text-decoration: none;
     font-size: 25px;
-    color: #ffffff;
+    color: #999999;
     display: block;
     font-family: 'Raleway';
     border-radius: 15px;
@@ -187,11 +188,10 @@ transition: .3s;
   background-color: rgba(0, 0, 0, 0);
 }
 .img1 img {
-  visibility: hidden;
 position: absolute;
 padding-left: 50%;
 width: 45%;
-
+transition: .3s;
 z-index: -2;
 }
 .text2 {
@@ -222,15 +222,15 @@ padding-right: 10%
   border-bottom-color: white;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-
 }
 .img2 img {
-  visibility: hidden;
-  width: auto;
+
+    width: auto;
     height: 55%;
     padding-left: 50px;
     padding-top: 600px;
     z-index: -2;
     float: left;
     position: absolute;
+    transition: .3s;
 }

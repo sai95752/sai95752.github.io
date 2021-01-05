@@ -1,81 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="logo1.png">
     <link rel="stylesheet" href="main1.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
-        <title>Amador Valley TSA - Home</title>
+      <title>Amador Valley TSA - Home</title>
 </head>
 <body>
-    <div id="topnav">
-        <div id="hamburger" class="nav" role="button" onclick="myFunction(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+        <div id="topnav">
+          <div id="hamburger" class="nav" role="button" onclick="myFunction(this)">
+                <div id="bar1" class="bar1"></div>
+                <div id="bar2"  class="bar2"></div>
+                <div id="bar3"  class="bar3"></div>
         </div>
         <!-- <div id="logo" class="homelogo">
             <a href="index1.html">
                 <img id="pic" src="logo1.png" height=32px>
             </a>
         </div> -->
-        <div id="horizontal_menu">
-          <a id="logo" class="homelogo" href="index1.html">
-              <img id="pic" src="logo1.png" height=32px>
-          </a>
-          <a id="box" class="box" href="index1.html">Home</a>
-          <a id="box1" class="box" href="#">CTE</a>
-          <a id="box2" class="box" href="#">About our Chapter</a>
-          <a id="box3" class="box" href="#">Calendar</a>
-          <a id="box4" class="box" href="#">Events</a>
-          <a id="box5" class="box" href="#">Contact</a>
-          <a id="box6" class="box" href="topnav_test.html">Webmaster</a>
+            <div data-aos="fade-up" id="horizontal_menu">
+                  <a id="logo" class="homelogo" href="index1.html">
+                      <img id="pic" src="logo1.png" height=32px>
+                  </a>
+                  <a id="box" class="box" href="index1.html">Home</a>
+                  <a id="box1" class="box" href="#">CTE</a>
+                  <a id="box2" class="box" href="#">About our Chapter</a>
+                  <a id="box3" class="box" href="#">Calendar</a>
+                  <a id="box4" class="box" href="#">Events</a>
+                  <a id="box5" class="box" href="#">Contact</a>
+                  <a id="box6" class="box" href="topnav_test.html">Webmaster</a>
 
-        </div>
-        <br>
-        <div id="vertical_menu" class="menu_items">
-          <a  class="list" href="#">Home</a>
+            </div>
+                    <br>
+          <div data-aos="fade-up" id="vertical_menu" class="menu_items">
+            <a class="list" href="#">Home</a>
             <a class="list" href="#">CTE</a>
             <a class="list" href="#">About our Chapter</a>
             <a class="list" href="#">Calendar</a>
             <a class="list" href="#">Events</a>
             <a class="list" href="#">Contact</a>
             <a class="list" href="#">Webmaster</a>
+          </div>
         </div>
-    </div>
-    <div class="textbody">
+    <div data-aos="fade-right" class="textbody">
 <h1 class="heading"> <span id="tsa" class="tsa">TSA|</span><span id="arch" class="tsa"> Architects</span></br> of Amador Valley|</h1>
    </div>
 
-   <div id="img1" class="img1">
-     <img src="tsapic1.jpg" alt="tsapic1">
+   <div data-aos="fade-left" data-aos-duration="2000" data-aos-offset="440" class="img1">
+     <img id="img1" src="tsapic1.jpg" alt="tsapic1">
    </div>
-   <div class="intro">
+   <div data-aos="fade-up" data-aos-duration="700" data-aos-offset="440" class="intro">
 <h2 id="h1">Learning to lead in a technical world</h2>
 <hr style="width: 160%; float: left" >
 <p id="p1">Chartered in 1987, the Technology Student Association (TSA) is an international student non-profit organization created to develop skills and career opportunities in Science, Technology, Engineering, Mathematics, and business education. Over 250,000+ students from 2,000 nationwide chapters learn to become future engineers, scientists, and technologists through TSA's competitive events, leadership opportunities, and integrated educational programs.
 </p>
    </div>
-   <div id="img2" class="img2">
-     <img src="tsapic2.jpg" alt="tsapic2">
+   <div  class="img2">
+     <img data-aos="fade-down" data-aos-offset="800" data-aos-duration="1000" id="img2" src="tsapic2.jpg" alt="tsapic2">
    </div>
-   <div class="text2">
+   <div data-aos="fade-left" data-aos-duration="1500" data-aos-offset="440" class="text2">
       <h2 id="h2">About TSA</h2>
       <hr >
       <p id="p2">The Amador Valley TSA is based in Pleasanton, CA in Silicon Valley. At AVHS TSA, we give our members the chance to pursue academic challenges among friends with similar goals and interests. Together, chapter members and officers work on competitive events, attend conferences on the state and national levels, and learn to apply leadership skills. This year, Amador Valley will be hosting the Regional Competition for Northern California TSA Chapters. Members of Amador Valley TSA have the chance to become officers within California or run for national office.</p>
    </div>
 
-    <div class="cir">
+    <!--<div class="cir">
       <span class="bgcircle"></span>
-    </div>
+    </div>-->
     <div class="hi">
     </div>
 </body>
 <!--JS-->
 <script id="javascript">
-
+AOS.init()
 window.onbeforeunload = function() {window.scrollTo(0, 0)};
 
 window.onscroll = function() {scrollFunction2()}
@@ -94,18 +95,22 @@ window.onscroll = function() {scrollFunction2()}
     window.onscroll = function() {scrollFunction()};
 document.body.style.background = "#320661"
 function scrollFunction() {
-  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+  if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000) {
     document.body.style.background = 'white'
     document.body.style.opacity = '1'
-
-    document.getElementById('img1').style.visibility = 'visible';
-    document.getElementById('img2').style.visibility = 'visible';
+    document.getElementById('bar1').style.backgroundColor = 'Black'
+    document.getElementById('bar2').style.backgroundColor = 'Black'
+    document.getElementById('bar3').style.backgroundColor = 'Black'
+    document.a.style.color = 'Black'
 }
   else if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     document.body.style.background = 'black';
     document.body.style.opacity = '1';
-    document.getElementById('img1').style.visibility = 'visible';
-    document.getElementById('img2').style.visibility = 'visible';
+    document.getElementById('bar1').style.backgroundColor = 'White'
+    document.getElementById('bar2').style.backgroundColor = 'White'
+    document.getElementById('bar3').style.backgroundColor = 'White'
+
+
 }
 
   else if (document.body.scrollTop > 150   || document.documentElement.scrollTop > 150) {
@@ -113,8 +118,6 @@ function scrollFunction() {
     document.getElementById("hamburger").style.marginLeft = "15px";
     document.getElementById("topnav").style.margin = "20px 0px";
     document.getElementById("horizontal_menu").style.display = "none";
-    document.getElementById('img1').style.visibility = 'visible';
-    document.getElementById('img2').style.visibility = 'visible';
 
   } else {
     document.getElementById("topnav").style.width = "100%";
@@ -123,9 +126,6 @@ function scrollFunction() {
     document.getElementById("topnav").style.margin = "20px 10px";
     document.getElementById("horizontal_menu").style.display = "block";
     document.body.style.background = "#320661"
-    document.getElementById('img1').style.visibility = 'hidden';
-    document.getElementById('img2').style.visibility = 'hidden';
-
   }
 }
 
