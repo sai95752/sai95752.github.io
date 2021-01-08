@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <link rel="icon" href="MedComm_Images/gradient_icon.svg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href= "https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
-    <title>Webmaster Navigation Menu Test</title>
+    <title>MedComm</title>
     <style>
         html {
             scroll-behavior: smooth;
@@ -12,10 +13,6 @@
         body {
             background-image: linear-gradient(90deg, #b600b6, #800080);
             margin: 0;
-            /* background-image: url("MedComm_Images/blobs.svg");
-            background-repeat: no-repeat;
-            background-position: 25vw -30vh;
-            background-size: 80.78vw; */
         }
         a {
             text-decoration: none;
@@ -26,8 +23,8 @@
         .spacer {
             height: 50vh;
         }
-        /* styles for static topnav menu: */
 
+        /* styles for static topnav menu: */
         #statnav {
             z-index: 200;
             position: fixed;
@@ -49,7 +46,7 @@
             float: left;
         }
         .hamburger {
-            z-index: 400;
+            z-index: 201;
             visibility: hidden;
             float: right;
             width: 30px;
@@ -96,6 +93,7 @@
         }
 
         #menu_items {
+            z-index: 199;
             position: fixed;
             text-align: center;
             background-color:rgba(255, 255, 255, 0.9);
@@ -132,23 +130,40 @@
             background-color: white;
             color: purple;
         }
-        /* styles for home: */
-
+        /* styles for desktop: */
+        @media (min-aspect-ratio: 1/1){
+            #home{
+                background-image: url("MedComm_Images/blobs.svg");
+                background-size: 70vw;
+                background-position-x: 40vw;
+                background-position-y: -15vw;
+                background-repeat: no-repeat;
+                font-size: 2.7vw;
+            }
+            #hometext {
+                margin-left: 6vw;
+                width: 60%;
+            }
+        }
+        /* styles for mobile: */
+        @media(max-aspect-ratio: 9999/10000){
+            #home{
+                /* text-align: center; */
+                font-size: 3.5vw;
+            }
+            #hometext {
+                margin: auto;
+                width: 80%;
+            }
+        }
         #home{
-            /* border-style: solid; */
-            text-align: center;
             line-height: 1.2;
             margin: 60px 0px 0px 0px;
-            padding: 3vh 0;
+            padding-bottom: 5vh;
             display: inline-block;
-            width: 100%;
-            font-size: 3.5vw;
             color: white;
         }
         #hometext {
-            margin: auto;
-            /* border-style: solid; */
-            width: 80%;
             text-align: left;
         }
         #media_buttons img {
@@ -174,6 +189,52 @@
             text-align: left;
         }
         /* styles for history: */
+        #history{
+            min-height: 35vh;
+            color: white;
+            padding: 3vh 0;
+            display: inline-block;
+            width: 80%;
+            font-size: 2vw;
+            margin: 0 10%;
+        }
+        #historytext{
+            padding: 0 0 5% 0;
+        }
+        .tl_marker{
+            opacity: 30%;
+            height: 4vw;
+        }
+        .tl_marker:hover{
+            cursor: pointer;
+            opacity: 70%;
+        }
+        
+        #timeline .active{
+            pointer-events: none;
+            opacity: 100%;
+        }
+
+        #timeline{
+            line-height: 1;
+            text-align: center;
+            border-radius: 100vw;
+            background-image: linear-gradient( 90deg, #FF5D1A, #FF0BC5);
+            margin-top: 2.5%;
+            width: 100%;
+        }
+
+        #tl_events p{
+            line-height: 1.5;
+            margin-top: 2.5%;
+            margin-right: 10%;
+            position: absolute;
+            transition: 0.3s;
+            opacity: 0%;
+        }
+        #tl_events .active{
+            opacity: 100%;
+        }
         /* styles for services: */
         #services{
             text-align: center;
@@ -208,6 +269,9 @@
         }
         #planstext h3 {
             line-height: .8;
+        }
+        #disclaimer {
+            font-size: 1.5vw;
         }
         /* styles for store: */
         /* styles for contact: */
@@ -292,57 +356,91 @@
                 non-emergency patients get the care they need without adding to the flood of patients
                 at in-person hospitals, and driving down the cost of healthcare for minor issues.
                 We accomplished our first goal thanks to our excellent healthcare and frictionless
-                software, built by professional software engineers with the goal of improving on
-                current video conferencing applications. In addition, as our service is purely driven
-                by medical students seeking practice, we care for minor issues completely free of
-                charge, successfully accomplishing our second goal.</p>
+                software—built with the help of our school's computer science department—with the goal 
+                of improving on current video conferencing applications with features specialized for a 
+                medical environment. In addition, as our service is purely driven by medical students 
+                seeking practice, we care for minor issues completely at extremely low costs, successfully 
+                accomplishing our second goal.</p>
         </div>
     </div>
-    <div id="history" class="spacer"></div>
+    <div id="history">
+        <h1>History.</h1>
+            <table id="timeline">
+                    <td><img class="tl_marker tl_1 active"src="MedComm_Images/timeline_mark.svg" onclick="set_active('.tl_1', '.tl_marker, .tl_event')"></td>
+                    <td><img class="tl_marker tl_2"src="MedComm_Images/timeline_mark.svg" onclick="set_active('.tl_2', '.tl_marker, .tl_event')"></td>
+                    <td><img class="tl_marker tl_3"src="MedComm_Images/timeline_mark.svg" onclick="set_active('.tl_3', '.tl_marker, .tl_event')"></td>
+                    <td><img class="tl_marker tl_4"src="MedComm_Images/timeline_mark.svg" onclick="set_active('.tl_4', '.tl_marker, .tl_event')"></td>
+                    <td><img class="tl_marker tl_5"src="MedComm_Images/timeline_mark.svg" onclick="set_active('.tl_5', '.tl_marker, .tl_event')"></td>
+                    <td><img class="tl_marker tl_6"src="MedComm_Images/timeline_mark.svg" onclick="set_active('.tl_6', '.tl_marker, .tl_event')"></td>
+            </table>
+            <div id="historytext">
+                <div id=tl_events>
+                    <p class="tl_event tl_1 active">March 20th 2020 - A group of friends hop on a Zoom call and realize all of the cons, then
+                        come up with an idea for a better solution for doctors and medical patients to use. DocNet
+                        was the original idea, where we would purely have medical students treat patients online
+                        for minor purposes.</p>
+                    <p class="tl_event tl_2">March 29th 2020 - The original draft of MedComm was finished, We built this original draft
+                        of MedComm by ourselves. We studied code diligently by ourselves on online learning
+                        platforms such as Sololearn and EDX to be able to build this platform. </p>
+                    <p class="tl_event tl_3">April 5th 2020 - MedComm was published through the original domain MedComm.com. Originally,
+                        it was a success, however, as more and more people started using DocNet, the website crashed.
+                        We reached out to our school’s engineering department for help.</p>
+                    <p class="tl_event tl_4">May 7th 2020 - A meeting was held between the school’s engineering department. During this meeting,
+                        the final plan for MedComm was built.</p>
+                    <p class="tl_event tl_5">June 1st 2020 - A partnership was created between Sprint and MedComm, to provide fast and reliable
+                        connectivity for all users on MedComm.</p>
+                    <p class="tl_event tl_6">October 21st 2020 - MedComm was completely finished, thanks to the help of our school’s engineering
+                        department. The final MedComm was published, under the domain “medcomm.us”. We reached nearly 300
+                        million users within the first two months and our UCSF medical assistants treated over 10,000
+                        patients with minor issues.</p>
+                </div>
+            </div>
+    </div>
     <div id="services" class="white">
         <div id="servicetext">
             <h1>Services.</h1>
-            <h3>Assistant Medical Professionals On Call</h3>
-            <p>Unlike every other telecommunications service, we provide 24/7 profession medical support. 
-                Our assistant medical professionals are certified doctors and students from the local UCSF, 
-                with skills ranging from dentistry to neuroscience. We have 300 medical professionals on 
-                call 24/7. If your need as a patient is minor, you can meet one on one with our assistant 
-                medical professionals to discuss your problem.</p>
-            <h3>Translators On Call</h3>
-            <p>If the patient speaks a different language than the doctor, we also have experienced 
-                translators on call. Our 400 translators speak over 50 languages. Our translators have 
-                graduated from the top universities with advanced degrees in their language.</p>
-            <h3>Prescription Database</h3>
-            <p>Our software has a database with all the types of medications, and it’s sorted into different 
-                categories, with descriptions, so the doctor can find medications.  We have also partnered 
-                with CVS and Walgreens for medications, so doctors and patients can easily send prescriptions 
-                to either pharmacies. </p>
-            <h3>Note Taking Software</h3>
-            <p>
-                Our software for calls senses the voice between the doctor and the patient, and puts it in 
-                text on the note pad which is accessible to both the patient and doctor. The notepad 
-                automatically detects the important things and highlights them in the notepad, such as taking 
-                in key words and identifying the patient’s illness the prescription given.
-            </p>
+            <h3>World-Renowned Medical Consultants on Call</h3>
+            <p>UCSF is renowned for being one of the best universities to study medicine in the world. Every
+                time you get on a call using MedComm, you are talking with a prodigious student or experienced
+                faculty member of our esteemed college. In addition, as many of our thousands of faculty members
+                are certified doctors, we can write out prescriptions to cure minor issues at very low costs.
+                Moreover, thanks to our university's wide variety of specializations, we offer medical expertise
+                on more pressing issues ranging from dermatology to neuroscience, but with a higher fee.</p>
+            <h3>Software-Aided Diagnosis</h3>
+            <p>Our software has access to a vast database of the 10,000 most commonly prescribed medications.
+                With the help of machine learning algorithms, as a medical consultant jots down symptoms
+                on their virtual notepad, our software can find the best medication to treat the patient. This
+                allows for extremely fast and accurate diagnosis.</p>
+            <h3>Automatic Transcripts</h3>
+            <p>Our software is equipped with a voice recognition feature that will automatically generate a
+                transcript of everything said in the call. This makes it far easier for doctors to extrapolate
+                the most important things a patient tells them without missing anything. This, paired with our
+                software-aided diagnosis, leads to extremely efficient and high quality care.</p>
+            <h3>Automated Translation</h3>
+            <p>Unlike in-person hospitals, we can care for people from any part of the world. To fully enable this,
+                our transcripts have a translate feature, supporting the 108 most-spoken languages in the world.
+                Thanks to this feature, the language you speak does not determine the quality of care you receive.</p>
         </div>
     </div>
     <div id="plans">
         <div id="planstext">
             <h1>Plans.</h1>
-            <h3>Free Plan</h3>
-            <p>Occasional ads, limit of 5 hours per day, and prescription autofilling.</p>
-            <h3>Basic Plan ($5 monthly)</h3>
-            <p>No ads, no call time limit, note taking pad software, and prescription autofilling.</p>
-            <h3>Premium Plan ($10 monthly)</h3>
-            <p>No ads, no call time limit, note taking pad software, prescription autofilling, and translators on call.</p>
-            <h3>Clinic Plan ($15 monthly)</h3>
-            <p>No ads, no call time limit, note taking pad software, prescription autofilling, medical assistants on 
-                call for 5 times per day and translators on call.</p>
-            <h3>Hospital Plan ($20 monthly)</h3>
-            <p>No ads, no call time limit, note taking pad software, prescription autofilling, unlimited medical assistants and translators on call. </p>
+            <h3>One-Time Checkup ($15.00)</h3>
+            <p>Full access to our wonderful services for one session, with a 1 hour time limit.</p>
+            <h3>Bronze Plan ($40.00 annually)</h3>
+            <p>Full access to our wonderful services for 4 calls a year, with 1 hour time limits.</p>
+            <h3>Silver Plan ($55.00 annually)</h3>
+            <p>Full access to our wonderful services for 5 a year, with 2 hour time limits</p>
+            <h3>Gold Plan ($70.00 annually)</h3>
+            <p>Full access to our wonderful services for 6 sessions a year, with 3 hour time limits.</p>
+            <h3>Diamond Plan ($85.00 annually)</h3>
+            <p>Full access to our wonderful services for unlimited sessions a year, with no time limits.</p>
+            <p id="disclaimer">*All prices above do not include any extra fees you may have to pay for medications or
+                other treatment as part of your care.</p>
         </div>
     </div>
-    <div id="store" class="spacer white"></div>
+    <div id="store" class="spacer white">
+    </div>
     <div id="contact">
         <div id="contacttext">
             <h1>Contact.</h1>
@@ -350,7 +448,7 @@
                 message below, or email us to reach out!</p>
             <ul>
                 <li>Email: medcomm@sf.edu</li>
-                <li>Phone: 441 555 4569</li>
+                <li>Phone: 415-555-4569</li>
                 <li>Meet Us: 505 Parnassus Ave, San Francisco, CA 94143</li>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152695.503528719!2d-122.62820373095185!3d37.05982823667415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858759dacb6383%3A0x4be313988bad802c!2sUCSF%20Medical%20Center!5e0!3m2!1sen!2sus!4v1609747789337!5m2!1sen!2sus"
                 id="map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -373,12 +471,16 @@
 
     var hamburger = document.getElementById("hamburger");
     var menu_items = document.getElementById("menu_items");
-    var nav_items = document.getElementById("nav_items")
+    var nav_items = document.getElementById("nav_items");
+
     if (window.innerWidth < 1100){
         hamburger.style.visibility = "visible";
         nav_items.style.visibility = "hidden";
     }
+    $("#historytext").css("height", $(".tl_event.active").height())
+
     window.onresize = function() {
+        $("#historytext").css("height", $(".tl_event.active").height())
         if (window.innerWidth < 1100){
             hamburger.style.opacity = 1;
             hamburger.style.visibility = "visible";
@@ -400,19 +502,23 @@
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
 
-        var elemTop = $(elem).offset().top;
+        var elemTop = $(elem).offset().top - 60;
         var elemBottom = elemTop + $(elem).height();
 
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        return ((elemBottom >= docViewTop) && (elemTop <= docViewTop));
     }
 
-    function set_active(class_name){
-        $("a").removeClass("active");
+    function set_active(class_name, type="a"){
+        $(type).removeClass("active");
         $(class_name).addClass("active");
+        $("#historytext").css("height", $(".tl_event.active").height())
     }
 
     $(window).scroll(function(){
-        if(is_visible($("#home"))){
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight){
+            set_active(".contact")
+        }
+        else if(is_visible($("#home"))){
             set_active(".statlogo");
         }
         else if(is_visible($("#about"))){
@@ -430,9 +536,9 @@
         else if(is_visible($("#store"))){
             set_active(".store");
         }
-        else if(is_visible($("#contact"))){
-            set_active(".contact");
-        }
+        // else if(is_visible($("#contact"))){
+        //     set_active(".contact");
+        // }
     });
 
     // window.onscroll = function() {

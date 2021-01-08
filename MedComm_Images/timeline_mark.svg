@@ -1,0 +1,7 @@
+<svg viewBox="0 0 100 500" xmlns="http://www.w3.org/2000/svg">
+  <linearGradient id="POgradient">
+    <stop offset="0%" stop-color="#FF5D1A" />
+    <stop offset="100%" stop-color="#FF0BC5" />
+</linearGradient>
+  <rect x="0" width="100" height="500" rx="50" fill="white"/>
+</svg>
