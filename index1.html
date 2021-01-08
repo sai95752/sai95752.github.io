@@ -49,7 +49,8 @@
           </div>
         </div>
     <div data-aos="fade-right" class="textbody">
-<h1 class="heading"> <span id="tsa" class="tsa">TSA|</span><span id="arch" class="tsa"> Architects</span></br> of Amador Valley|</h1>
+<h1 class="heading"> <span id="tsa" class="tsa">TSA|</span><span id="arch" class="tsa"> Architects</span></br> of Amador
+   Valley|</h1>
    </div>
 
    <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="440" class="img1">
@@ -58,18 +59,28 @@
    <div data-aos="fade-right" data-aos-duration="700" data-aos-offset="440" class="intro">
 <h2 id="h1">Learning to lead in a technical world</h2>
 <hr style="width: 160%; float: left" >
-<p id="p1">Chartered in 1987, the Technology Student Association (TSA) is an international student non-profit organization created to develop skills and career opportunities in Science, Technology, Engineering, Mathematics, and business education. Over 250,000+ students from 2,000 nationwide chapters learn to become future engineers, scientists, and technologists through TSA's competitive events, leadership opportunities, and integrated educational programs.
+<p id="p1">Chartered in 1987, the Technology Student Association (TSA) is an international student non-profit organization
+  created to develop skills and career opportunities in Science, Technology, Engineering, Mathematics, and business
+  education. Over 250,000+ students from 2,000 nationwide chapters learn to become future engineers, scientists, and
+  technologists through TSA's competitive events, leadership opportunities, and integrated educational programs.
 </p>
    </div>
+   <div class="wrapper2">
    <div  class="img2">
      <img data-aos="fade-down" data-aos-offset="800" data-aos-duration="1000" id="img2" src="tsapic2.jpg" alt="tsapic2">
    </div>
    <div data-aos="fade-left" data-aos-duration="1500" data-aos-offset="440" class="text2">
       <h2  id="h2">About TSA</h2>
       <hr >
-      <p id="p2">The Amador Valley TSA is based in Pleasanton, CA in Silicon Valley. At AVHS TSA, we give our members the chance to pursue academic challenges among friends with similar goals and interests. Together, chapter members and officers work on competitive events, attend conferences on the state and national levels, and learn to apply leadership skills. This year, Amador Valley will be hosting the Regional Competition for Northern California TSA Chapters. Members of Amador Valley TSA have the chance to become officers within California or run for national office.</p>
+      <p id="p2">The Amador Valley TSA is based in Pleasanton, CA in Silicon Valley. At AVHS TSA, we give our members the
+        chance to pursue academic challenges among friends with similar goals and interests. Together, chapter members and
+         officers work on competitive events, attend conferences on the state and national levels, and learn to apply
+          leadership skills. This year, Amador Valley will be hosting the Regional Competition for Northern California
+           TSA Chapters. Members of Amador Valley TSA have the chance to become officers within California or run for
+           national office.</p>
    </div>
-   <div data-aos="fade-down" class="officers">
+ </div>
+   <div data-aos="fade-down" data-aos-offset="340" class="officers">
      <div data-aos="fade-up" data-aos-offset="340" class="profile1">
        <img src="copres1.png" alt="copresident: sungjee park" height="152px">
        <h4>Sungjee Park</h4>
@@ -80,24 +91,25 @@
        <h4>Lily Cheng</h4>
        <p>Co-President</p>
      </div>
-    <div style="padding: " class="profile1">
+    <div data-aos="fade-up" data-aos-offset="340" style="padding: " class="profile1">
       <img src="vpadmin.png" alt="vp of admin: anjali ramesh" height="152px">
       <h4>Anjali Ramesh</h4>
       <p>VP of Adminstration</p>
     </div>
+    <div data-aos="fade-up" data-aos-offset="340" style="padding: " class="profile1">
+      <img src="vpadmin.png" alt="vp of admin: anjali ramesh" height="152px">
+      <h4>Anjali Ramesh</h4>
+      <p>VP of Adminstration</p>
+    </div>
+
    </div>
 
-    <!--<div class="cir">
-      <span class="bgcircle"></span>
-    </div>-->
-    <div class="hi">
-    </div>
 </body>
 <!--JS-->
 <script id="javascript">
 AOS.init()
 window.onbeforeunload = function() {window.scrollTo(0, 0)};
-
+var currentYScrollPosition = 0;
 window.onscroll = function() {scrollFunction2()}
     function myFunction(x) {
         x.classList.toggle("change");
@@ -114,17 +126,17 @@ window.onscroll = function() {scrollFunction2()}
     window.onscroll = function() {scrollFunction()};
 document.body.style.background = "#320661"
 function scrollFunction() {
+  currentYScrollPosition = document.body.scrollTop;
+  if (currentYScrollPosition == 0) {
+    currentYScrollPosition = document.documentElement.scrollTop;
+  }
 if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     document.body.style.background = 'black';
     document.body.style.opacity = '1';
     document.getElementById('bar1').style.backgroundColor = 'White'
     document.getElementById('bar2').style.backgroundColor = 'White'
     document.getElementById('bar3').style.backgroundColor = 'White'
-
-
-}
-
-  else if (document.body.scrollTop > 150   || document.documentElement.scrollTop > 150) {
+} else if (document.body.scrollTop > 150   || document.documentElement.scrollTop > 150 || window.innerWidth < 1440) {
     document.getElementById("topnav").style.width = "160px";
     document.getElementById("hamburger").style.marginLeft = "15px";
     document.getElementById("topnav").style.margin = "20px 0px";
@@ -143,7 +155,7 @@ if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
 window.onload = function() {windowCollapse()};
 window.onresize = function() {windowCollapse()};
 function windowCollapse() {
-  if (window.innerWidth < 1440) {
+  if (window.innerWidth < 1440 || currentYScrollPosition > 150) {
     document.getElementById("topnav").style.width = "190px";
     document.getElementById("hamburger").style.marginLeft = "15px";
     document.getElementById("topnav").style.margin = "20px 0px";
@@ -158,8 +170,5 @@ function windowCollapse() {
 
   }
 }
-
-
-
 </script>
 </html>

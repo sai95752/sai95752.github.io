@@ -97,7 +97,6 @@ display: block;
 .mySlides {
   display: none;
 }
-.hi {height: 2000px;}
 
 .cir {
   padding-bottom: 500px;
@@ -129,10 +128,6 @@ transition: .3s;
 }
 #box6:hover {
   font-size: 16px;
-}
- .cir {
-  overflow: hidden;
-  max-width: 100%;
 }
 .textbody {
   padding-top: 450px;
@@ -221,17 +216,24 @@ padding-right: 10%
     position: absolute;
     transition: .3s;
 }
+.officers {
+  display: block;
+  float: left;
+  overflow-x: scroll;
 
+}
 .profile1 {
   width: 320px;
   border-radius: 10px;
   height: 300px;
-  margin-top: 800px;
-  margin-left: 80px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 100px;
   float: left;
   background-color: white;
   position: relative;
   text-align: center;
+  display: inline-block;
 }
 .profile1 img {
   text-align: center;
