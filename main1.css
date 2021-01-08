@@ -75,6 +75,7 @@ display: block;
     display: block;
     font-family: 'Raleway';
     border-radius: 15px;
+    z-index: 3;
     transition: .3s;
 }
 
@@ -102,24 +103,15 @@ display: block;
   padding-bottom: 500px;
 }
 
-.bgcircle {
-  height: 2500px;
-  width: 2500px;
-  background-color: #080404;
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 20%;
-  z-index: -1;
-  position: absolute;
-  margin-left: 500px;
-  overflow: hidden;
-}
 .box {
-border-top-width: 0px;
+border-top-color: black;
+border-top-width: 20px;
 display: block;
 float: left;
 padding-left:  45px;
 padding-right: 45px;
+padding-top: 20px;
+padding-bottom: 20px;
 text-decoration: none;
 font-family: 'Raleway';
 font-size: 15px;
@@ -228,4 +220,32 @@ padding-right: 10%
     float: left;
     position: absolute;
     transition: .3s;
+}
+
+.profile1 {
+  width: 320px;
+  border-radius: 10px;
+  height: 300px;
+  margin-top: 800px;
+  margin-left: 80px;
+  float: left;
+  background-color: white;
+  position: relative;
+  text-align: center;
+}
+.profile1 img {
+  text-align: center;
+  margin: 20px 75px 0px 75px;
+}
+.profile1 h4 {
+  font-family: 'Open Sans';
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+.profile1 p {
+  font-family: 'Alegreya Sans SC'
+}
+.profile2 {
+  margin-top: 650px;
+  margin-bottom: 500px;
 }
