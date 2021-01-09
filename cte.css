@@ -1,10 +1,13 @@
 body {
-  background-color: #320661;
+  background-color: #000000;
   opacity: 1;
   z-index: -3;
   overflow-x: hidden;
   transition: 1s;
+  margin: 0;
+  padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -16,7 +19,7 @@ html {
   padding-bottom: 5px;
   transition: 0.15s;
   width: 100%;
-  position: fixed;
+  position: absolute;
   transition: .3s;
   margin: 10px 10px;
   background: rgba(0, 0, 0, 0);
@@ -113,6 +116,7 @@ html {
   transform: translate(0x, -9px) rotate(135deg);
   width: 30px;
 }
+
 .box {
   border-top-color: black;
   border-top-width: 20px;
@@ -123,7 +127,7 @@ html {
   padding-top: 20px;
   padding-bottom: 20px;
   text-decoration: none;
-  font-family: 'Raleway';
+  font-family: 'Open Sans';
   font-size: 15px;
   color: #FFFFFF;
   transition: .3s;
@@ -131,154 +135,89 @@ html {
 
 .box:hover {
   font-family: 'Raleway';
-  font-weight: 800;
   background-color: #872BE7;
   font-size: 16px
 }
 
-#box6 {
-  font-weight: 1200;
-}
-
-#box6:hover {
-  font-size: 16px;
-}
-
-.textbody {
-  padding-top: 450px;
-  margin-right: 10px;
-  color: white;
-  font-family: 'open sans';
-  font-size: 69px;
-  text-align: right;
-}
-
-.tsa {
-  color: #872BE7;
-}
-
-#arch {
-  display: none;
-}
-
-.intro {
-  float: right;
-  font-size: 28px;
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  z-index: 2;
-  margin-left: 5%;
-  margin-right: 65%;
-  border-bottom-color: #872BE7;
-  border-bottom-style: solid;
-  border-bottom-width: 4px;
-}
-
-.intro p {
-  float: left;
-  font-family: 'Open Sans';
-  font-size: 15px;
-  width: 400px;
-}
-
-#box {
-  color: #872BE7;
-}
-
-#box:hover {
-  color: #872BE7;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.img1 img {
-  position: absolute;
-  padding-left: 50%;
-  width: 45%;
-  transition: .3s;
+.introtext {
   z-index: -2;
 }
 
-.text2 {
-  float: right;
-  padding-top: 80px;
-  padding-right: 10%
-}
-
-.text2 h2 {
-  color: white;
-  font-size: 42px;
-  font-family: 'Open Sans';
-  z-index: 2;
-  text-align: right;
-}
-
-.text2 hr {
-  float: right;
-  width: 230%;
-  height: 2px;
-  background-color: #872BE7;
-  border-color: #872BE7
-}
-
-.text2 p {
-  float: right;
-  color: white;
-  width: 400px;
-  font-family: 'Open Sans';
-  text-align: right;
-  border-bottom-color: white;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-}
-
-.img2 img {
-  width: 594px;
-  height: 385px;
-  padding-left: 50px;
-  padding-top: 600px;
-  z-index: -2;
-  float: left;
-  position: absolute;
-  transition: .3s;
-}
-
-.officers {
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   display: block;
-  float: left;
-  overflow-x: scroll;
+  width: 120%;
+  height: auto;
+  filter: opacity(20%) blur(3px);
+  z-index: -3;
 }
 
-.profile1 {
-  width: 320px;
-  border-radius: 10px;
-  height: 300px;
-  margin-top: 80px;
-  margin-bottom: 20px;
-  margin-left: 100px;
-  float: left;
-  background-color: white;
-  position: relative;
-  text-align: center;
-  display: inline-block;
-}
-
-.profile1 img {
-  text-align: center;
-  margin: 20px 75px 0px 75px;
-}
-
-.profile1 h4 {
+.heading {
+  color: white;
   font-family: 'Open Sans';
-  font-size: 25px;
-  margin-bottom: 0px;
+  font-size: 99px;
+  z-index: 1;
+  float: right;
+  margin-top: -800px;
+  filter: brightness(120%);
 }
 
-.profile1 p {
-  font-family: 'Alegreya Sans SC'
-}
-.buttons {
-  background-color: #872BE7;
-  width: 200px;
-  height:20px;
+.heading span {
+  color: #872BE7;
   float: right;
+}
+
+.mainbody {
+  margin-top: -430px;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  line-height: 30px;
+  float: left;
+}
+
+.mainbody h2 {
+  color: black;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  padding-top: 50px;
+  margin: 40px 40px 40px 20%;
+}
+
+.mainbody p {
+  max-width: 300px;
+  margin-left: 20%;
+  font-family: 'Open Sans'
+}
+
+.buttons {
+  float: right;
+  margin-right: 275px;
+  margin-top: -380px;
+  top: -30px;
+  bottom: 0px;
+  min-width: 320px;
+  max-width: 250px;
+  min-height: 40px;
+  max-height: 4px;
+  background-color: #872BE7;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 6px;
+  padding-top: 10px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  color: white;
+  transition: .1s
+}
+
+.buttons:hover {
+  filter: brightness(120%);
+}
+.cards {
+  width: 100%;
+  color: white;
 }
