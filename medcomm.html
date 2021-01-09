@@ -274,6 +274,35 @@
             font-size: 1.5vw;
         }
         /* styles for store: */
+        #store {
+            text-align: center;
+            line-height: 1.5;
+            padding: 3vh 0;
+            display: inline-block;
+            width: 100%;
+            font-size: 2vw;
+        }
+        #storetext {
+            margin: auto;
+            width: 80%;
+            text-align: left;
+        }
+        .buy_item{
+            text-align: center;
+            display: inline-block;
+            border-radius: 2vw;
+            box-shadow: 1px 1px 4px grey;
+            margin-bottom: 1vh;
+        }
+        .buy_item p{
+            margin: 0 10% 5% 10%;
+        }
+        #buy_medcomm_icon {
+            width: 20vw;
+        }
+        #buy_watch_icon {
+            width: 15vw;
+        }
         /* styles for contact: */
         #contact{
             color: white;
@@ -285,7 +314,7 @@
             font-size: 2vw;
         }
         #contacttext {
-            margin: auto;
+            margin: 0 10%;
             width: 80%;
             text-align: left;
         }
@@ -296,7 +325,47 @@
             width: 60vw;
             height: 40vh;
         }
+        #feedback{
+            background-color: white;
+            color: purple;
+            text-align: center;
+            line-height: 2;
+            padding: 2vh;
+            border-radius: 1vh;
+            box-shadow: 3px 3px 6px grey;
+            width: 100%;
+            transition: 0.3s;
+        }
+        #feedback h3 {
+            font-size: 3vw;
+        }
 
+        #feedback input, textarea{
+            width: 90%;
+            font-size: 1.8vw;
+            resize: none;
+            border-style: hidden;
+            padding: 5px;
+            border-radius: .5vh;
+            box-shadow: 1px 1px 3px grey;
+        }
+        #feedback input[type=button]{
+            font-size: 2vw;
+            width: 20%;
+            color: white;
+            background-color: #750075;
+        }
+        #feedback input[type=button]:hover{
+            cursor: pointer;
+        }
+        #feedback label{
+            font-size: 1.8vw;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        #message {
+            height: 20vh;
+        }
     </style>
 </head>
 <body>
@@ -335,13 +404,13 @@
             <p>We're on the cutting-edge of medicine, offering innovative and revolutionary
                 technology. Scroll down to learn more.</p>
             <div id="media_buttons">
-                <a class = "facebook" href="https://www.facebook.com">
+                <a class = "facebook" href="https://www.facebook.com/med.comm.1422">
                     <img src="MedComm_Images/facebook.svg">
                 </a>
-                <a class = "instagram" href="https://www.instagram.com">
+                <a class = "instagram" href="https://www.instagram.com/TSA_Med_Comm/">
                     <img src="MedComm_Images/instagram.svg">
                 </a>
-                <a class = "twitter" href="https://www.twitter.com">
+                <a class = "twitter" href="https://twitter.com/comm_med">
                     <img src="MedComm_Images/twitter.svg">
                 </a>
             </div>
@@ -361,6 +430,30 @@
                 medical environment. In addition, as our service is purely driven by medical students 
                 seeking practice, we care for minor issues completely at extremely low costs, successfully 
                 accomplishing our second goal.</p>
+            <h3>Webmaster 2021</h3>
+            <p>For the 2021 Technology Student Association Webmaster Event, teams were required to
+                “Create a fictional medical telecommunications company and design a website”. The website
+                should serve as a guide for information about the company and their communication services
+                provided. Present an overview of services as if you were a consumer. Provide the type of
+                solutions your company creates, sells, and/or serves. To respond to this theme, our team
+                created MedComm.
+            </p>
+            <h3>Design Choices</h3>
+            <p>While creating MedComm, we took inspiration from other telecommunications companies, such
+                as Zoom, Lingoace, and Skype. Jumping from aspects of user experience and attractiveness,
+                we decided on an interactive website with a carefully designed color spectrum. We also made
+                sure that our website was easy to navigate and was clean to the eye. Right from the homepage,
+                we introduce the core of our company. The entire website is one consecutive page to make a
+                slick appearance and make it easy to navigate. Each page has a title, subtitles, and groups
+                of text to address different topics. </p>
+            <h3>Website Structure and Planning</h3>
+            <p>About Us- Introduction, Webmaster 2021, Design Choices, Structure and Planning.<br>
+                History- Timeline with upbringing of MedComm<br>
+                Services- Assistant Medical Professionals, Translators, Prescription Database, Note taking software.<br>
+                Plans- Fees and services offered.<br>
+                Store- Our productions to assist telehealth.<br>
+                Contact- Our contact information and message leaver.</p>
+            
         </div>
     </div>
     <div id="history">
@@ -439,13 +532,45 @@
                 other treatment as part of your care.</p>
         </div>
     </div>
-    <div id="store" class="spacer white">
+    <div id="store" class="white">
+        <div id="storetext">
+            <h1>Store.</h1>
+            <div id="buy_medcomm" class="buy_item">
+                <h3>MedComm Video Conferencing Application (FREE)</h3>
+                <a href="#buy_medcomm"><img id="buy_medcomm_icon" src="MedComm_Images/gradient_icon.svg"></a>
+                <p>This excellent piece of software is how we connect to our patients during sessions.
+                    It's completely free, just click on the icon above to start the installation process.</p>
+            </div>
+            <div id="buy_watch" class="buy_item">
+                <h3>MedComm Smart Watch ($100.00)</h3>
+                <a href="#buy_watch"><img id="buy_watch_icon" src="MedComm_Images/MedComm_Watch.png"></a>
+                <p>The future of medical technology is here. This innovative watch measures your vital signs to
+                    a degree of accuracy never achieved before and automatically sends the data to your
+                    personal medical consultant whenever you join a session with them. This allows for extreme
+                    efficiency during your care. Click the icon above to be led the purchase page for this
+                    magnificent work of hardware.
+                </p>
+            </div>
+        </div>
     </div>
     <div id="contact">
         <div id="contacttext">
             <h1>Contact.</h1>
-            <p>At MedComm, we’re always on the lookout for customer feedback! Please call us, leave a
-                message below, or email us to reach out!</p>
+            <p>At MedComm, we’re always on the lookout for customer feedback! Feel free to shoot us a
+                message down below:</p>
+            <div id="feedback">
+                <form>
+                    <h3>Send us a message.</h3>
+                    <input type="text" id="fname" name="fname" placeholder="First Name">
+                    <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
+                    <input type="text" id="email" name="email" placeholder="Email Address"><br><br>
+                    <textarea id="message" name="message" placeholder="Message"></textarea><br>
+                    <label for="submit" class="submit_lbl">Your Response was Submitted!</label><br>
+                    <input type="button" class="submit_btn" value="Submit">
+                </form> 
+            </div>
+            <p>If you'd like to get in contact with us by other means, take a look at our contact information
+                below:</p>
             <ul>
                 <li>Email: medcomm@sf.edu</li>
                 <li>Phone: 415-555-4569</li>
@@ -508,6 +633,15 @@
         return ((elemBottom >= docViewTop) && (elemTop <= docViewTop));
     }
 
+    $(".submit_btn").click(function(){
+            var closest_form = $(this).closest("form");
+            closest_form.find("input[type=text], textarea").val("");
+            closest_form.find(".submit_lbl").css("opacity", "100");
+            setTimeout(function(){
+                closest_form.find(".submit_lbl").css("opacity", "0");
+            }, 2000);
+        });
+
     function set_active(class_name, type="a"){
         $(type).removeClass("active");
         $(class_name).addClass("active");
@@ -536,7 +670,11 @@
         else if(is_visible($("#store"))){
             set_active(".store");
         }
+        else if(is_visible($("#contact"))){
+            set_active(".contact");
+        }
     });
+
 
 </script>
 </html>
