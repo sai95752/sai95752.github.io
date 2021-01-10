@@ -145,34 +145,29 @@ html {
   color: #872BE7;
 }
 .header {
-  margin
+
   float: right;
   color: white;
   font-family: 'Open Sans';
   font-size: 69px;
-}
-.subhead {
-  margin-top: 250px;
-  float:right;
-  width: 540px;
-  margin-right: -220px;
-  font-family: 'Open Sans';
-  color: white;
+  margin-bottom: 40px;
 }
 .about {
+  text-align: center;
   float: left;
   color: #872BE7;
-  margin-left: 50px;
-  margin-top:200px;
+  margin-right: -500px;
+  margin-top: 420px;
   font-family: 'Open Sans';
   margin-bottom: 0px;
+  width: 1040px;
 }
 .text {
   float: left;
   text-align: left;
-  margin-top: 300px;
-  margin-left: -350px;
-  width: 500px;
+  margin-top: 500px;
+  margin-left: -400px;
+  width: 1040px;
   color: white;
   line-height: 2;
   font-family: 'Open Sans'
@@ -191,4 +186,45 @@ html {
 .img {
   height: 400px;
   margin-left:90px;
+}
+
+.officers {
+  display: block;
+  float: left;
+  overflow-x: scroll;
+}
+
+.profile1 {
+  width: 320px;
+  border-radius: 10px;
+  height: 300px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  float: left;
+  background-color: white;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+
+.profile1 img {
+  text-align: center;
+  margin: 20px 75px 0px 75px;
+}
+
+.profile1 h4 {
+  font-family: 'Open Sans';
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+.profile1 p {
+  font-family: 'Alegreya Sans SC'
+}
+.buttons {
+  background-color: #872BE7;
+  width: 200px;
+  height:20px;
+  float: right;
 }

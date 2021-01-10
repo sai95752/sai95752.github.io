@@ -3,35 +3,56 @@
   <head>
     <link rel="stylesheet" href="contact.css">
     <meta charset="utf-8">
-    <title></title>
+    <title>Amador Valley TSA - Contact</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+
   </head>
   <body>
+    <div data-aos="fade-up" id="horizontal_menu">
+            <a id="box" class="box" href="index1.html">Home</a>
+      <a id="box1" class="box" href="cte.html">CTE</a>
+      <a id="box2" class="box" href="about.html">About our Chapter</a>
+      <a id="box3" class="box" href="calendar.html">Calendar</a>
+      <a id="box4" class="box" href="events.html">Events</a>
+      <a id="box5" class="box" href="contact.html">Contact</a>
+      <a id="box6" class="box" href="medcomm.html">Webmaster</a>
+    </div>
+
     <div id="contacttext">
-      <h1>Contact</h1>
-      <p>At TSA, we’re always on the lookout for customer feedback! Feel free to shoot us a
-        message down below:</p>
+      <br><br><br><br><br>
+      <h1 style="color: white;">Contact <span style="color:#872BE7">Us</span></h1>
+      <p style="color: white; font-family: 'Open Sans'">At <span style="color:#872BE7">TSA</span>, we’re always looking forward to improving our program.</p>
       <div id="feedback">
         <form>
-          <h3>Send us a message</h3>
+          <h3 style="color: #440E7C; font-family: 'Open Sans'; ">Send us a message</h3>
           <input type="text" id="fname" name="fname" placeholder="First Name">
           <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
           <input type="text" id="email" name="email" placeholder="Email Address"><br><br>
           <textarea id="message" name="message" placeholder="Message"></textarea><br>
-          <label for="submit" class="submit_lbl">Your Response was Submitted!</label><br>
+          <label style="font-family:'Open Sans'; color: #440E7C" for="submit" class="submit_lbl">Your Response was Submitted!</label><br>
           <input type="button" class="submit_btn" value="Submit">
         </form>
       </div>
-      <p>If you'd like to get in contact with us by other means, take a look at our contact information
+      <p style="color: white; font-family: 'Open Sans'; ">If you'd like to get in contact with us by other means, take a look at our contact information
         below:</p>
       <ul>
-        <li>Email: medcomm@sf.edu</li>
-        <li>Phone: 415-555-4569</li>
-        <li></li>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152695.503528719!2d-122.62820373095185!3d37.05982823667415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858759dacb6383%3A0x4be313988bad802c!2sUCSF%20Medical%20Center!5e0!3m2!1sen!2sus!4v1609747789337!5m2!1sen!2sus"
-          id="map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <li>Hours: 24/7</li>
-      </ul>
+        <li style="color: white; font-family:'Open Sans'; font-size: 32px; list-style-type:  none;"> Email: avhstsa@gmail.com</li>
+        <li style="color: white; font-family:'Open Sans';font-size: 32px; list-style-type:  none;"> Advisor's Phone: 925-461-6100</li>
+        <li style="color: white; font-family:'Open Sans';font-size: 32px; list-style-type:  none;">Address: 1155 Santa Rita Rd, Room G-1
+Pleasanton, CA 94566</li>
+       </ul>
     </div>
+    <script type="text/javascript">
+    $(".submit_btn").click(function() {
+      var closest_form = $(this).closest("form");
+      closest_form.find("input[type=text], textarea").val("");
+      closest_form.find(".submit_lbl").css("opacity", "100");
+      setTimeout(function() {
+        closest_form.find(".submit_lbl").css("opacity", "0");
+      }, 2000);
+    });
+
+    </script>
   </body>
 </html>
