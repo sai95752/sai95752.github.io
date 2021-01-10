@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
   <title>Amador Valley TSA - Home</title>
 </head>
-
 <body>
   <div id="topnav">
     <div id="hamburger" class="nav" role="button" onclick="myFunction(this)">
@@ -31,7 +30,7 @@
         <img id="pic" src="logo1.png" height=32px>
       </a>
       <a id="box" class="box" href="index1.html">Home</a>
-      <a id="box1" class="box" href="#">CTE</a>
+      <a id="box1" class="box" href="cte.html">CTE</a>
       <a id="box2" class="box" href="#">About our Chapter</a>
       <a id="box3" class="box" href="#">Calendar</a>
       <a id="box4" class="box" href="#">Events</a>
@@ -42,7 +41,7 @@
     <br>
     <div data-aos="fade-up" id="vertical_menu" class="menu_items">
       <a class="list" href="index1.html">Home</a>
-      <a class="list" href="#">CTE</a>
+      <a class="list" href="cte.html">CTE</a>
       <a class="list" href="#">About our Chapter</a>
       <a class="list" href="#">Calendar</a>
       <a class="list" href="#">Events</a>
@@ -52,8 +51,7 @@
   </div>
   <div data-aos="fade-right" class="textbody">
     <h1 class="heading"> <span id="tsa" class="tsa">TSA|</span><span id="arch" class="tsa"> Architects</span></br> of Amador
-      Valley|</h1>
-  </div>
+      Valley|</h1>  </div>
 
   <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="440" class="img1">
     <img id="img1" src="tsapic1.jpg" alt="tsapic1">
@@ -83,29 +81,37 @@
     </div>
   </div>
   <div data-aos="fade-down" data-aos-offset="340" class="officers">
-    <div data-aos="fade-up" data-aos-offset="340" class="profile1">
+    <div data-aos="fade-right" data-aos-offset="340" class="profile1">
       <img src="copres1.png" alt="copresident: sungjee park" height="152px">
       <h4>Sungjee Park</h4>
-      <p>CO-PRESIDENT</p>
+      <p>Co-President</p>
     </div>
     <div data-aos="fade-up" data-aos-offset="340" class="profile1">
       <img src="copres2.png" alt="copresident: lily cheng" height="152px">
       <h4>Lily Cheng</h4>
       <p>Co-President</p>
     </div>
-    <div data-aos="fade-up" data-aos-offset="340" style="padding: " class="profile1">
+    <div data-aos="fade-left" data-aos-offset="340" style="padding: " class="profile1">
       <img src="vpadmin.png" alt="vp of admin: anjali ramesh" height="152px">
       <h4>Anjali Ramesh</h4>
       <p>VP of Adminstration</p>
     </div>
-    <div data-aos="fade-up" data-aos-offset="340" style="padding: " class="profile1">
-      <img src="vpadmin.png" alt="vp of admin: anjali ramesh" height="152px">
-      <h4>Anjali Ramesh</h4>
-      <p>VP of Adminstration</p>
+    <div data-aos="fade-right" data-aos-offset="340" style="padding: " class="profile1" id="vpfinance">
+      <img src="vpfinance.png" alt="vp of admin: anjali ramesh" height="152px">
+      <h4>Pranav Subraman</h4>
+      <p>VP of Finance</p>
     </div>
-
+    <div data-aos="fade-down" data-aos-offset="340" style="padding: " class="profile1" id="vpfinance">
+      <img src="vpcomm.png" alt="vp of admin: anjali ramesh" height="152px">
+      <h4>Marie Lee</h4>
+      <p>VP of Communications</p>
+    </div>
+    <div data-aos="fade-left" data-aos-offset="340" style="padding: " class="profile1" id="vpfinance">
+      <img src="vpevents.png" alt="vp of admin: anjali ramesh" height="152px">
+      <h4>Sean Lee</h4>
+      <p>VP of Events</p>
+    </div>
   </div>
-
 </body>
 <!--JS-->
 <script id="javascript">
@@ -145,7 +151,7 @@
       document.getElementById('bar1').style.backgroundColor = 'White'
       document.getElementById('bar2').style.backgroundColor = 'White'
       document.getElementById('bar3').style.backgroundColor = 'White'
-    } else if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150 || window.innerWidth < 1440) {
+    } else if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150 || window.innerWidth < 1200) {
       document.getElementById("topnav").style.width = "160px";
       document.getElementById("hamburger").style.marginLeft = "15px";
       document.getElementById("topnav").style.margin = "20px 0px";
@@ -169,7 +175,7 @@
   };
 
   function windowCollapse() {
-    if (window.innerWidth < 1440 || currentYScrollPosition > 150) {
+    if (window.innerWidth < 1200 || currentYScrollPosition > 150) {
       document.getElementById("topnav").style.width = "190px";
       document.getElementById("hamburger").style.marginLeft = "15px";
       document.getElementById("topnav").style.margin = "20px 0px";
