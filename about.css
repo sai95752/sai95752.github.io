@@ -11,14 +11,14 @@ html {
 
 #topnav {
   display: block;
-  height: 60px;
+  height: 1.2rem;
   overflow: hidden;
-  padding-bottom: 5px;
+  padding-bottom: 0.1rem;
   transition: 0.15s;
   width: 100%;
   position: fixed;
   transition: .3s;
-  margin: 10px 10px;
+  margin: 0.2rem 0.2rem;
   background: rgba(0, 0, 0, 0);
   z-index: 1;
 }
@@ -34,15 +34,15 @@ html {
 }
 
 #pic:hover {
-  height: 35px;
+  height: 0.7rem;
   margin: auto;
 }
 
 .nav div {
-  height: 4px;
+  height: 0.08rem;
   background-color: #872BE7;
-  margin: 5px 0;
-  border-radius: 25px;
+  margin: 0.1rem 0;
+  border-radius: 0.5rem;
   transition: 0.3s;
 }
 
@@ -52,26 +52,26 @@ html {
 
 .nav {
   float: left;
-  width: 30px;
+  width: 0.6rem;
   height: auto;
-  margin-left: -100px;
+  margin-left: -2rem;
   transition: .6s;
 }
 
 .bar1 {
-  width: 30px;
+  width: 0.6rem;
 }
 
 .bar2 {
-  width: 20px;
+  width: 0.4rem;
 }
 
 .bar3 {
-  width: 10px;
+  width: 0.2rem;
 }
 
 .nav:hover div {
-  width: 32px;
+  width: 0.64rem;
 }
 
 .nav:hover {
@@ -80,17 +80,17 @@ html {
 
 /*Button END*/
 .menu_items {
-  padding-top: 50px;
+  padding-top: 1rem;
 }
 
 .list {
-  padding: 0px 0px 12px 12px;
+  padding: 0px 0px 0.24rem 0.24rem;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 0.5rem;
   color: #999999;
   display: block;
   font-family: 'Open Sans';
-  border-radius: 15px;
+  border-radius: 0.3rem;
   z-index: 3;
   transition: .3s;
 }
@@ -100,8 +100,8 @@ html {
 }
 
 .change .bar1 {
-  -webkit-transform: translate(0px, 9px) rotate(-135deg);
-  transform: translate(0px, 9px) rotate(-135deg);
+  -webkit-transform: translate(0px, 0.18rem) rotate(-135deg);
+  transform: translate(0px, 0.18rem) rotate(-135deg);
 }
 
 .change .bar2 {
@@ -109,22 +109,22 @@ html {
 }
 
 .change .bar3 {
-  -webkit-transform: translate(0px, -9px) rotate(135deg);
-  transform: translate(0x, -9px) rotate(135deg);
-  width: 30px;
+  -webkit-transform: translate(0px, -0.18rem) rotate(135deg);
+  transform: translate(0x, -0.18rem) rotate(135deg);
+  width: 0.6rem;
 }
 .box {
   border-top-color: black;
-  border-top-width: 20px;
+  border-top-width: 0.4rem;
   display: block;
   float: left;
-  padding-left: 45px;
-  padding-right: 45px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
   text-decoration: none;
   font-family: 'Open Sans';
-  font-size: 15px;
+  font-size: 0.3rem;
   color: #FFFFFF;
   transition: .3s;
 }
@@ -139,7 +139,7 @@ html {
 
 .maintext {
   text-align: right;
-  margin-top: 30px;
+  margin-top: 0.6rem;
 }
 .header span {
   color: #872BE7;
@@ -149,43 +149,43 @@ html {
   float: right;
   color: white;
   font-family: 'Open Sans';
-  font-size: 69px;
-  margin-bottom: 40px;
+  font-size: 1.38rem;
+  margin-bottom: 0.8rem;
 }
 .about {
   text-align: center;
   float: left;
   color: #872BE7;
-  margin-right: -500px;
-  margin-top: 420px;
+  margin-right: -10rem;
+  margin-top: 8.4rem;
   font-family: 'Open Sans';
   margin-bottom: 0px;
-  width: 1040px;
+  width: 20.8rem;
 }
 .text {
   float: left;
   text-align: left;
-  margin-top: 500px;
-  margin-left: -400px;
-  width: 1040px;
+  margin-top: 10rem;
+  margin-left: -8rem;
+  width: 20.8rem;
   color: white;
   line-height: 2;
   font-family: 'Open Sans'
 }
 .national {
-  margin-top:  300px;
+  margin-top:  6rem;
   line-height: 1.7;
-  margin-right: 100px;
+  margin-right: 2rem;
   float: right;
   text-align: right;
-  min-width: 300px;
-  max-width: 500px;
+  min-width: 6rem;
+  max-width: 10rem;
   font-family: 'Open Sans';
   color: white;
 }
 .img {
-  height: 400px;
-  margin-left:90px;
+  height: 8rem;
+  margin-left:1.8rem;
 }
 
 .officers {
@@ -195,12 +195,12 @@ html {
 }
 
 .profile1 {
-  width: 320px;
-  border-radius: 10px;
-  height: 300px;
-  margin-top: 80px;
-  margin-bottom: 20px;
-  margin-left: 100px;
+  width: 6.4rem;
+  border-radius: 0.2rem;
+  height: 6rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0.4rem;
+  margin-left: 2rem;
   float: left;
   background-color: white;
   position: relative;
@@ -210,12 +210,12 @@ html {
 
 .profile1 img {
   text-align: center;
-  margin: 20px 75px 0px 75px;
+  margin: 0.4rem 1.5rem 0px 1.5rem;
 }
 
 .profile1 h4 {
   font-family: 'Open Sans';
-  font-size: 25px;
+  font-size: 0.5rem;
   margin-bottom: 0px;
 }
 
@@ -224,7 +224,7 @@ html {
 }
 .buttons {
   background-color: #872BE7;
-  width: 200px;
-  height:20px;
+  width: 4rem;
+  height:0.4rem;
   float: right;
 }
