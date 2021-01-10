@@ -11,14 +11,14 @@ html {
 
 #topnav {
   display: block;
-  height: 1.2rem;
+  height: 60px;
   overflow: hidden;
-  padding-bottom: 0.1rem;
+  padding-bottom: 5px;
   transition: 0.15s;
   width: 100%;
   position: fixed;
   transition: .3s;
-  margin: 0.2rem 0.2rem;
+  margin: 10px 10px;
   background: rgba(0, 0, 0, 0);
   z-index: 1;
 }
@@ -34,15 +34,15 @@ html {
 }
 
 #pic:hover {
-  height: 0.7rem;
+  height: 35px;
   margin: auto;
 }
 
 .nav div {
-  height: 0.08rem;
+  height: 4px;
   background-color: #872BE7;
-  margin: 0.1rem 0;
-  border-radius: 0.5rem;
+  margin: 5px 0;
+  border-radius: 25px;
   transition: 0.3s;
 }
 
@@ -52,26 +52,26 @@ html {
 
 .nav {
   float: left;
-  width: 0.6rem;
+  width: 30px;
   height: auto;
-  margin-left: -2rem;
+  margin-left: -100px;
   transition: .6s;
 }
 
 .bar1 {
-  width: 0.6rem;
+  width: 30px;
 }
 
 .bar2 {
-  width: 0.4rem;
+  width: 20px;
 }
 
 .bar3 {
-  width: 0.2rem;
+  width: 10px;
 }
 
 .nav:hover div {
-  width: 0.64rem;
+  width: 32px;
 }
 
 .nav:hover {
@@ -80,17 +80,17 @@ html {
 
 /*Button END*/
 .menu_items {
-  padding-top: 1rem;
+  padding-top: 50px;
 }
 
 .list {
-  padding: 0px 0px 0.24rem 0.24rem;
+  padding: 0px 0px 12px 12px;
   text-decoration: none;
-  font-size: 0.5rem;
+  font-size: 25px;
   color: #999999;
   display: block;
   font-family: 'Open Sans';
-  border-radius: 0.3rem;
+  border-radius: 15px;
   z-index: 3;
   transition: .3s;
 }
@@ -100,8 +100,8 @@ html {
 }
 
 .change .bar1 {
-  -webkit-transform: translate(0px, 0.18rem) rotate(-135deg);
-  transform: translate(0px, 0.18rem) rotate(-135deg);
+  -webkit-transform: translate(0px, 9px) rotate(-135deg);
+  transform: translate(0px, 9px) rotate(-135deg);
 }
 
 .change .bar2 {
@@ -109,22 +109,22 @@ html {
 }
 
 .change .bar3 {
-  -webkit-transform: translate(0px, -0.18rem) rotate(135deg);
-  transform: translate(0x, -0.18rem) rotate(135deg);
-  width: 0.6rem;
+  -webkit-transform: translate(0px, -9px) rotate(135deg);
+  transform: translate(0x, -9px) rotate(135deg);
+  width: 30px;
 }
 .box {
   border-top-color: black;
-  border-top-width: 0.4rem;
+  border-top-width: 20px;
   display: block;
   float: left;
-  padding-left: 0.9rem;
-  padding-right: 0.9rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-decoration: none;
   font-family: 'Open Sans';
-  font-size: 0.3rem;
+  font-size: 15px;
   color: #FFFFFF;
   transition: .3s;
 }
@@ -139,92 +139,56 @@ html {
 
 .maintext {
   text-align: right;
-  margin-top: 0.6rem;
+  margin-top: 30px;
 }
 .header span {
   color: #872BE7;
 }
 .header {
-
+  margin
   float: right;
   color: white;
   font-family: 'Open Sans';
-  font-size: 1.38rem;
-  margin-bottom: 0.8rem;
+  font-size: 69px;
+}
+.subhead {
+  margin-top: 250px;
+  float:right;
+  width: 540px;
+  margin-right: -220px;
+  font-family: 'Open Sans';
+  color: white;
 }
 .about {
-  text-align: center;
   float: left;
   color: #872BE7;
-  margin-right: -10rem;
-  margin-top: 8.4rem;
+  margin-left: 50px;
+  margin-top:200px;
   font-family: 'Open Sans';
   margin-bottom: 0px;
-  width: 20.8rem;
 }
 .text {
   float: left;
   text-align: left;
-  margin-top: 10rem;
-  margin-left: -8rem;
-  width: 20.8rem;
+  margin-top: 300px;
+  margin-left: -350px;
+  width: 500px;
   color: white;
   line-height: 2;
   font-family: 'Open Sans'
 }
 .national {
-  margin-top:  6rem;
+  margin-top:  300px;
   line-height: 1.7;
-  margin-right: 2rem;
+  margin-right: 100px;
   float: right;
   text-align: right;
-  min-width: 6rem;
-  max-width: 10rem;
+  min-width: 300px;
+  max-width: 500px;
   font-family: 'Open Sans';
   color: white;
 }
 .img {
-  height: 8rem;
-  margin-left:1.8rem;
-}
-
-.officers {
-  display: block;
-  float: left;
-  overflow-x: scroll;
-}
-
-.profile1 {
-  width: 6.4rem;
-  border-radius: 0.2rem;
-  height: 6rem;
-  margin-top: 1.6rem;
-  margin-bottom: 0.4rem;
-  margin-left: 2rem;
-  float: left;
-  background-color: white;
-  position: relative;
-  text-align: center;
-  display: inline-block;
-}
-
-.profile1 img {
-  text-align: center;
-  margin: 0.4rem 1.5rem 0px 1.5rem;
-}
-
-.profile1 h4 {
-  font-family: 'Open Sans';
-  font-size: 0.5rem;
-  margin-bottom: 0px;
-}
-
-.profile1 p {
-  font-family: 'Alegreya Sans SC'
-}
-.buttons {
-  background-color: #872BE7;
-  width: 4rem;
-  height:0.4rem;
-  float: right;
+  height: 400px;
+  margin-left:90px;
 }

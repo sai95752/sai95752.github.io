@@ -11,13 +11,13 @@ html {
 
 #topnav {
   display: block;
-  height: 1.2rem;
+  height: 60px;
   overflow: hidden;
   transition: 0.15s;
   width: 100%;
   position: fixed;
   transition: .3s;
-  margin: 0.2rem 0.2rem;
+  margin: 10px 10px;
   background: rgba(0, 0, 0, 0);
   z-index: 1;
 }
@@ -32,15 +32,15 @@ html {
 }
 
 #pic:hover {
-  height: 0.7rem;
+  height: 35px;
   margin: auto;
 }
 
 .nav div {
-  height: 0.08rem;
+  height: 4px;
   background-color: #872BE7;
-  margin: 0.1rem 0;
-  border-radius: 0.5rem;
+  margin: 5px 0;
+  border-radius: 25px;
   transition: 0.3s;
 }
 
@@ -50,26 +50,26 @@ html {
 
 .nav {
   float: left;
-  width: 0.6rem;
+  width: 30px;
   height: auto;
-  margin-left: -2rem;
+  margin-left: -100px;
   transition: .6s;
 }
 
 .bar1 {
-  width: 0.6rem;
+  width: 30px;
 }
 
 .bar2 {
-  width: 0.4rem;
+  width: 20px;
 }
 
 .bar3 {
-  width: 0.2rem;
+  width: 10px;
 }
 
 .nav:hover div {
-  width: 0.64rem;
+  width: 32px;
 }
 
 .nav:hover {
@@ -78,17 +78,17 @@ html {
 
 /*Button END*/
 .menu_items {
-  padding-top: 1rem;
+  padding-top: 50px;
 }
 
 .list {
-  padding: 0px 0px 0.24rem 0.24rem;
+  padding: 0px 0px 12px 12px;
   text-decoration: none;
-  font-size: 0.5rem;
+  font-size: 25px;
   color: #999999;
   display: block;
   font-family: 'Raleway';
-  border-radius: 0.3rem;
+  border-radius: 15px;
   z-index: 3;
   transition: .3s;
 }
@@ -98,8 +98,8 @@ html {
 }
 
 .change .bar1 {
-  -webkit-transform: translate(0px, 0.18rem) rotate(-135deg);
-  transform: translate(0px, 0.18rem) rotate(-135deg);
+  -webkit-transform: translate(0px, 9px) rotate(-135deg);
+  transform: translate(0px, 9px) rotate(-135deg);
 }
 
 .change .bar2 {
@@ -107,20 +107,20 @@ html {
 }
 
 .change .bar3 {
-  -webkit-transform: translate(0px, -0.18rem) rotate(135deg);
-  transform: translate(0x, -0.18rem) rotate(135deg);
-  width: 0.6rem;
+  -webkit-transform: translate(0px, -9px) rotate(135deg);
+  transform: translate(0x, -9px) rotate(135deg);
+  width: 30px;
 }
 .box {
   border-top-color: black;
-  border-top-width: 0.4rem;
+  border-top-width: 20px;
   display: block;
   float: left;
   text-decoration: none;
-  padding-left: 0.9rem;
-  padding-right: 0.9rem;
+  padding-left: 45px;
+  padding-right: 45px;
   font-family: 'Raleway';
-  font-size: 0.3rem;
+  font-size: 15px;
   color: #FFFFFF;
   transition: .3s;
 }
@@ -134,15 +134,15 @@ html {
 }
 
 #box6:hover {
-  font-size: 0.32rem;
+  font-size: 16px;
 }
 
 .textbody {
-  padding-top: 9rem;
-  margin-right: 0.2rem;
+  padding-top: 450px;
+  margin-right: 10px;
   color: white;
   font-family: 'open sans';
-  font-size: 1.38rem;
+  font-size: 69px;
   text-align: right;
 }
 
@@ -156,7 +156,7 @@ html {
 
 .intro {
   float: right;
-  font-size: 0.56rem;
+  font-size: 28px;
   color: white;
   font-family: 'Open Sans', sans-serif;
   z-index: 2;
@@ -164,14 +164,14 @@ html {
   margin-right: 65%;
   border-bottom-color: #872BE7;
   border-bottom-style: solid;
-  border-bottom-width: 0.08rem;
+  border-bottom-width: 4px;
 }
 
 .intro p {
   float: left;
   font-family: 'Open Sans';
-  font-size: 0.3rem;
-  width: 8rem;
+  font-size: 15px;
+  width: 400px;
 }
 
 #box {
@@ -193,13 +193,13 @@ html {
 
 .text2 {
   float: right;
-  padding-top: 1.6rem;
+  padding-top: 80px;
   padding-right: 10%
 }
 
 .text2 h2 {
   color: white;
-  font-size: 0.84rem;
+  font-size: 42px;
   font-family: 'Open Sans';
   z-index: 2;
   text-align: right;
@@ -208,7 +208,7 @@ html {
 .text2 hr {
   float: right;
   width: 230%;
-  height: 0.04rem;
+  height: 2px;
   background-color: #872BE7;
   border-color: #872BE7
 }
@@ -216,7 +216,7 @@ html {
 .text2 p {
   float: right;
   color: white;
-  width: 8rem;
+  width: 400px;
   font-family: 'Open Sans';
   text-align: right;
   border-bottom-color: white;
@@ -225,10 +225,10 @@ html {
 }
 
 .img2 img {
-  width: 11.88rem;
-  height: 7.7rem;
-  padding-left: 1rem;
-  padding-top: 12rem;
+  width: 594px;
+  height: 385px;
+  padding-left: 50px;
+  padding-top: 600px;
   z-index: -2;
   float: left;
   position: absolute;
@@ -238,16 +238,16 @@ html {
 .officers {
   display: block;
   float: left;
-  overflow: none
+  overflow-x: scroll;
 }
 
 .profile1 {
-  width: 6.4rem;
-  border-radius: 0.2rem;
-  height: 6rem;
-  margin-top: 1.6rem;
-  margin-bottom: 0.4rem;
-  margin-left: 2rem;
+  width: 320px;
+  border-radius: 10px;
+  height: 300px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  margin-left: 100px;
   float: left;
   background-color: white;
   position: relative;
@@ -257,12 +257,12 @@ html {
 
 .profile1 img {
   text-align: center;
-  margin: 0.4rem 1.5rem 0px 1.5rem;
+  margin: 20px 75px 0px 75px;
 }
 
 .profile1 h4 {
   font-family: 'Open Sans';
-  font-size: 0.5rem;
+  font-size: 25px;
   margin-bottom: 0px;
 }
 
@@ -271,7 +271,7 @@ html {
 }
 .buttons {
   background-color: #872BE7;
-  width: 4rem;
-  height:0.4rem;
+  width: 200px;
+  height:20px;
   float: right;
 }

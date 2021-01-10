@@ -1,6 +1,3 @@
-body {
-background-color:  #440E7C
-}
 #contact {
   color: white;
   text-align: center;
@@ -33,7 +30,7 @@ background-color:  #440E7C
   line-height: 2;
   padding: 2vh;
   border-radius: 1vh;
-  box-shadow: 0.06rem 0.06rem 0.12rem grey;
+  box-shadow: 3px 3px 6px grey;
   width: 100%;
   transition: 0.3s;
 }
@@ -48,9 +45,9 @@ textarea {
   font-size: 1.8vw;
   resize: none;
   border-style: hidden;
-  padding: 0.1rem;
+  padding: 5px;
   border-radius: .5vh;
-  box-shadow: 1px 1px 0.06rem grey;
+  box-shadow: 1px 1px 3px grey;
 }
 
 #feedback input[type=button] {
@@ -72,140 +69,4 @@ textarea {
 
 #message {
   height: 20vh;
-}
-#topnav {
-  display: block;
-  height: 1.2rem;
-  overflow: hidden;
-  padding-bottom: 0.1rem;
-  transition: 0.15s;
-  width: 100%;
-  position: absolute;
-  transition: .3s;
-  margin: 0.2rem 0.2rem;
-  background: rgba(0, 0, 0, 0);
-  z-index: 1;
-}
-
-.nav, .homelogo {
-  float: left;
-  margin: 1em 0 0 1em;
-  z-index: 1
-}
-
-#pic {
-  transition: .3s;
-}
-
-#pic:hover {
-  height: 0.7rem;
-  margin: auto;
-}
-
-.nav div {
-  height: 0.08rem;
-  background-color: #872BE7;
-  margin: 0.1rem 0;
-  border-radius: 0.5rem;
-  transition: 0.3s;
-}
-
-.box {
-  display: block;
-}
-
-.nav {
-  float: left;
-  width: 0.6rem;
-  height: auto;
-  margin-left: -2rem;
-  transition: .6s;
-}
-
-.bar1 {
-  width: 0.6rem;
-}
-
-.bar2 {
-  width: 0.4rem;
-}
-
-.bar3 {
-  width: 0.2rem;
-}
-
-.nav:hover div {
-  width: 0.64rem;
-}
-
-.nav:hover {
-  cursor: pointer;
-}
-
-/*Button END*/
-.menu_items {
-  padding-top: 1rem;
-}
-
-.list {
-  padding: 0px 0px 0.24rem 0.24rem;
-  text-decoration: none;
-  font-size: 0.5rem;
-  color: #999999;
-  display: block;
-  font-family: 'Raleway';
-  border-radius: 0.3rem;
-  z-index: 3;
-  transition: .3s;
-}
-
-.list:hover {
-  color: #872BE7;
-}
-
-.change .bar1 {
-  -webkit-transform: translate(0px, 0.18rem) rotate(-135deg);
-  transform: translate(0px, 0.18rem) rotate(-135deg);
-}
-
-.change .bar2 {
-  opacity: 0;
-}
-
-.change .bar3 {
-  -webkit-transform: translate(0px, -0.18rem) rotate(135deg);
-  transform: translate(0x, -0.18rem) rotate(135deg);
-  width: 0.6rem;
-}
-
-.box {
-  border-top-color: black;
-  border-top-width: 0.4rem;
-  display: block;
-  float: left;
-  padding-left: 0.9rem;
-  padding-right: 0.9rem;
-  text-decoration: none;
-  font-family: 'Open Sans';
-  font-size: 0.3rem;
-  color: #FFFFFF;
-  transition: .3s;
-}
-
-.box:hover {
-color: #872BE7;
-}
-#box5 {
-  color: #872BE7;
-}
-.introtext {
-  z-index: -2;
-}
-h1 {
-  font-family: 'Open Sans';
-  font-size: 1.38rem;
-}
-::placeholder {
-  font-family: 'Open Sans'
-
 }

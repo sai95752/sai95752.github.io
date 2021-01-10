@@ -1,5 +1,5 @@
 body {
-  background-color: #440E7C;
+  background-color: #000000;
   opacity: 1;
   z-index: -3;
   overflow-x: hidden;
@@ -10,14 +10,14 @@ body {
 
 #topnav {
   display: block;
-  height: 1.2rem;
+  height: 60px;
   overflow: hidden;
-  padding-bottom: 0.1rem;
+  padding-bottom: 5px;
   transition: 0.15s;
   width: 100%;
   position: absolute;
   transition: .3s;
-  margin: 0.2rem 0.2rem;
+  margin: 10px 10px;
   background: rgba(0, 0, 0, 0);
   z-index: 1;
 }
@@ -33,15 +33,15 @@ body {
 }
 
 #pic:hover {
-  height: 0.7rem;
+  height: 35px;
   margin: auto;
 }
 
 .nav div {
-  height: 0.08rem;
+  height: 4px;
   background-color: #872BE7;
-  margin: 0.1rem 0;
-  border-radius: 0.5rem;
+  margin: 5px 0;
+  border-radius: 25px;
   transition: 0.3s;
 }
 
@@ -51,26 +51,26 @@ body {
 
 .nav {
   float: left;
-  width: 0.6rem;
+  width: 30px;
   height: auto;
-  margin-left: -2rem;
+  margin-left: -100px;
   transition: .6s;
 }
 
 .bar1 {
-  width: 0.6rem;
+  width: 30px;
 }
 
 .bar2 {
-  width: 0.4rem;
+  width: 20px;
 }
 
 .bar3 {
-  width: 0.2rem;
+  width: 10px;
 }
 
 .nav:hover div {
-  width: 0.64rem;
+  width: 32px;
 }
 
 .nav:hover {
@@ -79,17 +79,17 @@ body {
 
 /*Button END*/
 .menu_items {
-  padding-top: 1rem;
+  padding-top: 50px;
 }
 
 .list {
-  padding: 0px 0px 0.24rem 0.24rem;
+  padding: 0px 0px 12px 12px;
   text-decoration: none;
-  font-size: 0.5rem;
+  font-size: 25px;
   color: #999999;
   display: block;
   font-family: 'Raleway';
-  border-radius: 0.3rem;
+  border-radius: 15px;
   z-index: 3;
   transition: .3s;
 }
@@ -99,8 +99,8 @@ body {
 }
 
 .change .bar1 {
-  -webkit-transform: translate(0px, 0.18rem) rotate(-135deg);
-  transform: translate(0px, 0.18rem) rotate(-135deg);
+  -webkit-transform: translate(0px, 9px) rotate(-135deg);
+  transform: translate(0px, 9px) rotate(-135deg);
 }
 
 .change .bar2 {
@@ -108,23 +108,23 @@ body {
 }
 
 .change .bar3 {
-  -webkit-transform: translate(0px, -0.18rem) rotate(135deg);
-  transform: translate(0x, -0.18rem) rotate(135deg);
-  width: 0.6rem;
+  -webkit-transform: translate(0px, -9px) rotate(135deg);
+  transform: translate(0x, -9px) rotate(135deg);
+  width: 30px;
 }
 
 .box {
   border-top-color: black;
-  border-top-width: 0.4rem;
+  border-top-width: 20px;
   display: block;
   float: left;
-  padding-left: 0.9rem;
-  padding-right: 0.9rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-decoration: none;
   font-family: 'Open Sans';
-  font-size: 0.3rem;
+  font-size: 15px;
   color: #FFFFFF;
   transition: .3s;
 }
@@ -132,10 +132,10 @@ body {
 .box:hover {
   font-family: 'Open Sans';
   background-color: #872BE7;
-  font-size: 0.32rem
+  font-size: 16px
 }
 iframe {
-  margin-top: 1.6rem;
+  margin-top: 80px;
   margin-left: 20%;
   margin-right:40%;
 
