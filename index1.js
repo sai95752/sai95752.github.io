@@ -13,6 +13,7 @@ window.onscroll = function() {scrollFunction2()}
 
         }
     }
+    
 
     window.onscroll = function() {scrollFunction()};
 document.body.style.background = "#320661"
