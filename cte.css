@@ -124,8 +124,6 @@ html {
   float: left;
   padding-left: 45px;
   padding-right: 45px;
-  padding-top: 20px;
-  padding-bottom: 20px;
   text-decoration: none;
   font-family: 'Open Sans';
   font-size: 15px;
@@ -134,11 +132,11 @@ html {
 }
 
 .box:hover {
-  font-family: 'Raleway';
-  background-color: #872BE7;
-  font-size: 16px
+color: #872BE7;
 }
-
+#box1 {
+  color: #872BE7;
+}
 .introtext {
   z-index: -2;
 }
