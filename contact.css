@@ -1,0 +1,72 @@
+#contact {
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+  padding: 3vh 0;
+  display: inline-block;
+  width: 100%;
+  font-size: 2vw;
+}
+
+#contacttext {
+  margin: 0 10%;
+  width: 80%;
+  text-align: left;
+}
+
+#contacttext h3 {
+  line-height: .8;
+}
+
+#map {
+  width: 60vw;
+  height: 40vh;
+}
+
+#feedback {
+  background-color: white;
+  color: purple;
+  text-align: center;
+  line-height: 2;
+  padding: 2vh;
+  border-radius: 1vh;
+  box-shadow: 3px 3px 6px grey;
+  width: 100%;
+  transition: 0.3s;
+}
+
+#feedback h3 {
+  font-size: 3vw;
+}
+
+#feedback input,
+textarea {
+  width: 90%;
+  font-size: 1.8vw;
+  resize: none;
+  border-style: hidden;
+  padding: 5px;
+  border-radius: .5vh;
+  box-shadow: 1px 1px 3px grey;
+}
+
+#feedback input[type=button] {
+  font-size: 2vw;
+  width: 20%;
+  color: white;
+  background-color: #750075;
+}
+
+#feedback input[type=button]:hover {
+  cursor: pointer;
+}
+
+#feedback label {
+  font-size: 1.8vw;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#message {
+  height: 20vh;
+}

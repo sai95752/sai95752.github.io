@@ -13,6 +13,7 @@ html {
   display: block;
   height: 60px;
   overflow: hidden;
+  padding-bottom: 5px;
   transition: 0.15s;
   width: 100%;
   position: fixed;
@@ -24,6 +25,7 @@ html {
 
 .nav, .homelogo {
   float: left;
+  margin: 1em 0 0 1em;
   z-index: 1
 }
 
@@ -87,7 +89,7 @@ html {
   font-size: 25px;
   color: #999999;
   display: block;
-  font-family: 'Raleway';
+  font-family: 'Open Sans';
   border-radius: 15px;
   z-index: 3;
   transition: .3s;
@@ -116,162 +118,77 @@ html {
   border-top-width: 20px;
   display: block;
   float: left;
-  text-decoration: none;
   padding-left: 45px;
   padding-right: 45px;
-  font-family: 'Raleway';
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-family: 'Open Sans';
   font-size: 15px;
   color: #FFFFFF;
   transition: .3s;
 }
 
 .box:hover {
-  color: #872BE7;
+  background-color: #872BE7;
 }
 
 #box6 {
   font-weight: 1200;
 }
 
-#box6:hover {
-  font-size: 16px;
+.maintext {
+  text-align: right;
+  margin-top: 30px;
 }
-
-.textbody {
-  padding-top: 450px;
-  margin-right: 10px;
+.header span {
+  color: #872BE7;
+}
+.header {
+  margin
+  float: right;
   color: white;
-  font-family: 'open sans';
+  font-family: 'Open Sans';
   font-size: 69px;
-  text-align: right;
 }
-
-.tsa {
-  color: #872BE7;
-}
-
-#arch {
-  display: none;
-}
-
-.intro {
-  float: right;
-  font-size: 28px;
+.subhead {
+  margin-top: 250px;
+  float:right;
+  width: 540px;
+  margin-right: -220px;
+  font-family: 'Open Sans';
   color: white;
-  font-family: 'Open Sans', sans-serif;
-  z-index: 2;
-  margin-left: 5%;
-  margin-right: 65%;
-  border-bottom-color: #872BE7;
-  border-bottom-style: solid;
-  border-bottom-width: 4px;
 }
-
-.intro p {
+.about {
   float: left;
-  font-family: 'Open Sans';
-  font-size: 15px;
-  width: 400px;
-}
-
-#box {
   color: #872BE7;
-}
-
-#box:hover {
-  color: #872BE7;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.img1 img {
-  position: absolute;
-  padding-left: 50%;
-  width: 45%;
-  transition: .3s;
-  z-index: -2;
-}
-
-.text2 {
-  float: right;
-  padding-top: 80px;
-  padding-right: 10%
-}
-
-.text2 h2 {
-  color: white;
-  font-size: 42px;
+  margin-left: 50px;
+  margin-top:200px;
   font-family: 'Open Sans';
-  z-index: 2;
-  text-align: right;
-}
-
-.text2 hr {
-  float: right;
-  width: 230%;
-  height: 2px;
-  background-color: #872BE7;
-  border-color: #872BE7
-}
-
-.text2 p {
-  float: right;
-  color: white;
-  width: 400px;
-  font-family: 'Open Sans';
-  text-align: right;
-  border-bottom-color: white;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-}
-
-.img2 img {
-  width: 594px;
-  height: 385px;
-  padding-left: 50px;
-  padding-top: 600px;
-  z-index: -2;
-  float: left;
-  position: absolute;
-  transition: .3s;
-}
-
-.officers {
-  display: block;
-  float: left;
-  overflow-x: scroll;
-}
-
-.profile1 {
-  width: 320px;
-  border-radius: 10px;
-  height: 300px;
-  margin-top: 80px;
-  margin-bottom: 20px;
-  margin-left: 100px;
-  float: left;
-  background-color: white;
-  position: relative;
-  text-align: center;
-  display: inline-block;
-}
-
-.profile1 img {
-  text-align: center;
-  margin: 20px 75px 0px 75px;
-}
-
-.profile1 h4 {
-  font-family: 'Open Sans';
-  font-size: 25px;
   margin-bottom: 0px;
 }
-
-.profile1 p {
-  font-family: 'Alegreya Sans SC'
+.text {
+  float: left;
+  text-align: left;
+  margin-top: 300px;
+  margin-left: -350px;
+  width: 500px;
+  color: white;
+  line-height: 2;
+  font-family: 'Open Sans'
 }
-.buttons {
-  background-color: #872BE7;
-  width: 200px;
-  height:20px;
+.national {
+  margin-top:  300px;
+  line-height: 1.7;
+  margin-right: 100px;
   float: right;
+  text-align: right;
+  min-width: 300px;
+  max-width: 500px;
+  font-family: 'Open Sans';
+  color: white;
+}
+.img {
+  height: 400px;
+  margin-left:90px;
 }

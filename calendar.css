@@ -1,0 +1,142 @@
+body {
+  background-color: #000000;
+  opacity: 1;
+  z-index: -3;
+  overflow-x: hidden;
+  transition: 1s;
+  margin: 0;
+  padding: 0;
+}
+
+#topnav {
+  display: block;
+  height: 60px;
+  overflow: hidden;
+  padding-bottom: 5px;
+  transition: 0.15s;
+  width: 100%;
+  position: absolute;
+  transition: .3s;
+  margin: 10px 10px;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+.nav, .homelogo {
+  float: left;
+  margin: 1em 0 0 1em;
+  z-index: 1
+}
+
+#pic {
+  transition: .3s;
+}
+
+#pic:hover {
+  height: 35px;
+  margin: auto;
+}
+
+.nav div {
+  height: 4px;
+  background-color: #872BE7;
+  margin: 5px 0;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.box {
+  display: block;
+}
+
+.nav {
+  float: left;
+  width: 30px;
+  height: auto;
+  margin-left: -100px;
+  transition: .6s;
+}
+
+.bar1 {
+  width: 30px;
+}
+
+.bar2 {
+  width: 20px;
+}
+
+.bar3 {
+  width: 10px;
+}
+
+.nav:hover div {
+  width: 32px;
+}
+
+.nav:hover {
+  cursor: pointer;
+}
+
+/*Button END*/
+.menu_items {
+  padding-top: 50px;
+}
+
+.list {
+  padding: 0px 0px 12px 12px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #999999;
+  display: block;
+  font-family: 'Raleway';
+  border-radius: 15px;
+  z-index: 3;
+  transition: .3s;
+}
+
+.list:hover {
+  color: #872BE7;
+}
+
+.change .bar1 {
+  -webkit-transform: translate(0px, 9px) rotate(-135deg);
+  transform: translate(0px, 9px) rotate(-135deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: translate(0px, -9px) rotate(135deg);
+  transform: translate(0x, -9px) rotate(135deg);
+  width: 30px;
+}
+
+.box {
+  border-top-color: black;
+  border-top-width: 20px;
+  display: block;
+  float: left;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  color: #FFFFFF;
+  transition: .3s;
+}
+
+.box:hover {
+  font-family: 'Open Sans';
+  background-color: #872BE7;
+  font-size: 16px
+}
+iframe {
+  margin-top: 80px;
+  margin-left: 20%;
+  margin-right:40%;
+
+}
