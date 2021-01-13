@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta charset="utf-8">
+        <style>
+            #test {
+                display: inline-block;
+                font-size: 80px;
+            }
+            #cursor {
+                margin: auto;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="test"></p>
+        <svg id="cursor" width="10" height="80">
+            <rect width="10" height="80"/>
+        </svg>
+    </body>
+    <script>
+        function type(c_elem, elem, t_list, c_speed = 800, t_speed = 100, w_time = 1000, b_speed = 50){
+            // setting cursor blink:
+            setInterval(() => {
+                $(c_elem).css("opacity", 0);
+            }, c_speed);
+            setTimeout(() => {
+                setInterval(() => {
+                    $(c_elem).css("opacity", 100);
+                }, c_speed);
+            }, c_speed/2);
+            
+            var word_time = 0;
+
+            setInterval (() => {
+                for(let i = 0; i < t_list.length; i++){
+                    setTimeout(() => {
+                        // typing process:
+                        for(let j = 0; j < t_list[i].length; j++){
+                            setTimeout(() => {
+                                $(elem).text($(elem).text() + t_list[i][j]);
+                            }, word_time);
+                            word_time += t_speed;
+                        }
+
+                        word_time += w_time;
+                        
+                        // backspace process:
+                        for(let j = 0; j < t_list[i].length; j++){
+                            setTimeout(() => {
+                                $(elem).text($(elem).text().slice(0, -1));
+                            }, word_time);
+                            word_time += b_speed;
+                        }
+                    }, word_time);
+                }
+            }, 0);
+        }     
+
+        var text_list = ["text1", "text2", "text3", "text4", "text5"]
+        type("#cursor", "#test", text_list);
+
+    </script>
+</html>
