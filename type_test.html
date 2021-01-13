@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta charset="utf-8">
         <style>
+            * {
+                font-family: "GothamPro";
+            }
             #test {
                 display: inline-block;
                 font-size: 80px;
@@ -21,7 +25,8 @@
         </svg>
     </body>
     <script>
-        function type(c_elem, elem, t_list, c_speed = 800, t_speed = 100, w_time = 1000, b_speed = 50){
+        function type(c_elem, elem, t_list, 
+                      c_speed = 800, t_speed = 100, w_time = 1000, b_speed = 50){
             // setting cursor blink:
             setInterval(() => {
                 $(c_elem).css("opacity", 0);
@@ -34,7 +39,7 @@
             
             var word_time = 0;
 
-            setInterval (() => {
+            for(let h = 0; h < 200; h++){
                 for(let i = 0; i < t_list.length; i++){
                     setTimeout(() => {
                         // typing process:
@@ -56,7 +61,7 @@
                         }
                     }, word_time);
                 }
-            }, 0);
+            }
         }     
 
         var text_list = ["text1", "text2", "text3", "text4", "text5"]
