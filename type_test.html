@@ -8,21 +8,19 @@
             * {
                 font-family: "GothamPro";
             }
-            #test {
+            .type_text {
                 display: inline-block;
                 font-size: 80px;
             }
-            #cursor {
-                margin: auto;
-                height: 100%;
+            #typing_box {
+                width: 400px;
             }
         </style>
     </head>
     <body>
-        <p id="test"></p>
-        <svg id="cursor" width="10" height="80">
-            <rect width="10" height="80"/>
-        </svg>
+        <div id="typing_box">
+            <p class="type_text"><span id="test"></span><span id="cursor">|</span></p>
+        </div>
     </body>
     <script>
         function type(c_elem, elem, t_list, 
@@ -39,7 +37,7 @@
             
             var word_time = 0;
 
-            for(let h = 0; h < 200; h++){
+            for(let h = 0; h < 1000; h++){
                 for(let i = 0; i < t_list.length; i++){
                     setTimeout(() => {
                         // typing process:
@@ -64,7 +62,7 @@
             }
         }     
 
-        var text_list = ["text1", "text2", "text3", "text4", "text5"]
+        var text_list = ["text1", "text2", "text3", "text4", "two line text"]
         type("#cursor", "#test", text_list);
 
     </script>
