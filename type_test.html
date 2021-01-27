@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta charset="utf-8">
         <style>
-            #test {
-                display: inline-block;
+            * {
+                font-family: "Poppins", sans-serif;
                 font-size: 80px;
             }
-            #cursor {
-                margin: auto;
-                height: 100%;
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            #big_div {
+                display: inline-block;
+                margin-left: calc(50% - 250px);
+            }
+            #typing_box {
+                width: 500px;
+                background: linear-gradient(to right, #ff5d1aff, #ff0bc4ff);
+                background: -webkit-linear-gradient(to right, #ff5d1aff, #ff0bc4ff);
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+            #test {
+                -webkit-text-fill-color: transparent;
             }
         </style>
     </head>
     <body>
-        <p id="test"></p>
-        <svg id="cursor" width="10" height="80">
-            <rect width="10" height="80"/>
-        </svg>
+        <div id="big_div">
+            <p>We are</p>
+            <div id="typing_box">
+                <p class="type_text"><span id="test"></span><span id="cursor">|</span></p>
+            </div>
+        </div>
     </body>
     <script>
-        function type(c_elem, elem, t_list, c_speed = 800, t_speed = 100, w_time = 1000, b_speed = 50){
+        function type(c_elem, elem, t_list, 
+                      c_speed = 800, t_speed = 100, w_time = 2000, b_speed = 50){
             // setting cursor blink:
+            $(c_elem).css("transition", "0.3s");
+            $(c_elem).css("color", "black");
             setInterval(() => {
                 $(c_elem).css("opacity", 0);
             }, c_speed);
@@ -34,12 +55,13 @@
             
             var word_time = 0;
 
-            setInterval (() => {
+            for(let h = 0; h < 1000; h++){
                 for(let i = 0; i < t_list.length; i++){
                     setTimeout(() => {
                         // typing process:
                         for(let j = 0; j < t_list[i].length; j++){
                             setTimeout(() => {
+                                $(c_elem).css("opacity", 100);
                                 $(elem).text($(elem).text() + t_list[i][j]);
                             }, word_time);
                             word_time += t_speed;
@@ -50,16 +72,17 @@
                         // backspace process:
                         for(let j = 0; j < t_list[i].length; j++){
                             setTimeout(() => {
+                                $(c_elem).css("opacity", 100);
                                 $(elem).text($(elem).text().slice(0, -1));
                             }, word_time);
                             word_time += b_speed;
                         }
                     }, word_time);
                 }
-            }, 0);
+            }
         }     
 
-        var text_list = ["text1", "text2", "text3", "text4", "text5"]
+        var text_list = ["cliché 1.", "cliché 2.", "cliché 3.", "two-line cliché 4.", "MedComm."]
         type("#cursor", "#test", text_list);
 
     </script>
